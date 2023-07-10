@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import Head from 'next/head';
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import '/public/assets/pd-fancy.png';
 
 export default class PixelitePage extends React.Component {
 
@@ -28,7 +29,7 @@ export default class PixelitePage extends React.Component {
                 <meta property="og:type" content="website"/>
                 <meta property= "og:title" content={"Pixelite Digital | " + this.props.meta.title}/>
                 <meta property="og:url" content={"https://pixelite.digital/" + this.props.meta.url}/>
-
+                <meta name="twitter:image" content="/public/assets/pd-fancy.png"/>
                 <meta name="twitter:title" content={"Pixelite Digital | " + this.props.meta.title}/>
                 <meta property="twitter:description" content={this.props.meta.description}/>
             </Head>
