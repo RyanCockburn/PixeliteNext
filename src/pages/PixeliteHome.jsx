@@ -2,7 +2,9 @@ import React from "react";
 
 import Section from "../components/Section";
 
+import Lottie from "lottie-react";
 import PixelitePage from "./PixelitePage";
+import pdIso from "/public/assets/pd-iso.json";
 
 const Home = () => {
   const content = (
@@ -24,7 +26,7 @@ const Home = () => {
             need to take your business to the next level.
           </p>
         </div>
-        <img src="assets/test.png"></img>
+        <Lottie class="lottie" animationData={pdIso}/>
       </section>
       <div className="pixelite-background">
         <div className="combined-heading">
@@ -203,7 +205,7 @@ const Home = () => {
             business rise above the crowd.
           </p>
         </div>
-        <img src="assets/picture-template.png"></img>
+        <img src="assets/spotlight.png"></img>
       </section>
       <div id="image-scroller">
         <ul className="scroller-slide">

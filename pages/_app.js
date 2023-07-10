@@ -1,5 +1,7 @@
+import { Analytics } from '@vercel/analytics';
 import { Rubik } from 'next/font/google';
 import Script from "next/script";
+import { useEffect } from 'react';
 import '../styles/globals.css';
 
 const rubik = Rubik({
@@ -8,11 +10,15 @@ const rubik = Rubik({
 })
 
 export default function App({ Component, pageProps }) {
+
+    useEffect(() => {
+      
+    })
     return (
     <main className={rubik.className}>
-      <Script id="script" src="../assets/scripts.js" strategy='beforeInteractive'></Script>
+     <Script id="script" src="../assets/scripts.js" strategy='beforeInteractive'></Script>
       <Component {...pageProps} />
-      
+      <Analytics/>
     </main>
     );
   }

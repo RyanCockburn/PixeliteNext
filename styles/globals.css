@@ -7,6 +7,10 @@ html,
   --pixelite-background: radial-gradient(198.63% 293.41% at 50.66% -7.39%, rgba(153, 163, 255, 0.2) 0%, rgba(4, 2, 14, 0) 100%), #000000;
 }
 
+lottie-player{
+  margin: 0 auto;
+}
+
 body { 
   margin: 0;
   text-align: center;
@@ -250,9 +254,16 @@ nav > a > img {
 
 .pixelite-section > img {
   width: 50%;
-  max-width: 300px;
+  max-width: 350px;
   min-width: 200px;
-  max-height: 300px;
+  max-height: 350px;
+}
+
+.pixelite-section > .lottie {
+  max-width: 350px;
+  min-width: 200px;
+  max-height: 350px;
+  margin: 0 auto;
 }
 
 .project-tile {
@@ -757,8 +768,8 @@ nav > a > img {
   
   .pixelite-section > img {
     margin: auto;
-    min-width: 350px;
-    min-height: 350px;
+    min-width: 400px;
+    min-height: 400px;
   }
 
   .pixelite-section > div > h1 {

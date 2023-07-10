@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from 'react-helmet';
 
 import Head from 'next/head';
+import Script from "next/script";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
@@ -32,6 +33,7 @@ export default class PixelitePage extends React.Component {
                 <meta name="twitter:image" content="https://pixelite.digital/assets/pd-fancy.png"/>
                 <meta name="twitter:title" content={"Pixelite Digital | " + this.props.meta.title}/>
                 <meta property="twitter:description" content={this.props.meta.description}/>
+                <Script id="script" src="../assets/scripts.js" strategy='beforeInteractive'></Script>
             </Head>
             <Header 
             desktopHeader= {this.props.desktopHeader}

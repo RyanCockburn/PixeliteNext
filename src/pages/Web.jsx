@@ -72,7 +72,7 @@ const Home = () => {
               </p>
             </div>
             <div>
-              <img src="assets/icons/business-growth.svg" />
+              <img src="assets/icons/consumer.svg" />
               <h2>
                 Changing<span className="pixelite-blue"> Consumerism</span>
               </h2>
@@ -83,7 +83,7 @@ const Home = () => {
               </p>
             </div>
             <div>
-              <img src="assets/icons/revenue-increase.svg" />
+              <img src="assets/icons/creative-freedom.svg" />
               <h2>
                 Creative<span className="pixelite-blue"> Freedom</span>
               </h2>
@@ -95,7 +95,7 @@ const Home = () => {
               </p>
             </div>
             <div>
-              <img src="assets/icons/business-growth.svg" />
+              <img src="assets/icons/increased-visibility.svg" />
               <h2>
                 Increase<span className="pixelite-blue"> Visibility</span>
               </h2>
@@ -191,7 +191,7 @@ const Home = () => {
       </div>
     );
 
-    var meta = {url: "", 
+    var meta = {url: "web-design", 
     description: "Pixelite Digital, providing digital services to help your business grow",
     title: "Web Design"}
 
