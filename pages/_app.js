@@ -3,7 +3,7 @@ import Script from "next/script";
 import '../styles/globals.css';
 
 const rubik = Rubik({
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['variable'],
   subsets: ['latin'],
 })
 
