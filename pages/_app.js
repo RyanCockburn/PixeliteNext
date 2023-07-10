@@ -1,4 +1,4 @@
-import { Analytics } from '@vercel/analytics';
+import { Analytics } from '@vercel/analytics/react';
 import { Rubik } from 'next/font/google';
 import Script from "next/script";
 import { useEffect } from 'react';
@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
     <main className={rubik.className}>
      <Script id="script" src="../assets/scripts.js" strategy='beforeInteractive'></Script>
       <Component {...pageProps} />
-      <Analytics/>
+      <Analytics mode="production"/>
     </main>
     );
   }
