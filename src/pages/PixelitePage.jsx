@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from 'react-helmet';
 
+import Head from 'next/head';
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
@@ -15,10 +16,11 @@ export default class PixelitePage extends React.Component {
     }
 
 
+
     render(){
         return(
             <div>
-            <Helmet>
+            <Head>
                 <meta charSet="utf-8"/>
                 <link rel="canonical" href={"https://pixelite.digital/" + this.props.meta.url}/>
                 <meta property="og:description" content={this.props.meta.description}/>
@@ -29,7 +31,7 @@ export default class PixelitePage extends React.Component {
 
                 <meta name="twitter:title" content={"Pixelite Digital | " + this.props.meta.title}/>
                 <meta property="twitter:description" content={this.props.meta.description}/>
-            </Helmet>
+            </Head>
             <Header 
             desktopHeader= {this.props.desktopHeader}
             mobileHeader= {this.props.mobileHeader}
