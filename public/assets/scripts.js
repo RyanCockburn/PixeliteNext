@@ -68,17 +68,56 @@ function isInViewport(element) {
 
 function reveal(){
    var reveals= document.querySelectorAll(".reveal");
-   console.log(reveals)
    for(var i = 0; i < reveals.length; i++){
        var windowHeight = window.innerHeight;
        var revealTop = reveals[i].getBoundingClientRect().top;
        var revealPoint = 150;
        if((revealTop < windowHeight - revealPoint)) {
            reveals[i].classList.add("active");
-           console.log("Revealed")
        }
    }
 }
+
+
+const hamBurger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamBurger.addEventListener("click", () => {
+    hamBurger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    lockScroll();
+})
+
+const expandables = document.querySelectorAll(".expandable");
+
+expandables.forEach(expandable => {
+    expandable.addEventListener("click", () => {
+        const navItem = expandable.parentElement
+        const subMenu = navItem.querySelectorAll(".sub-menu")[0];
+        const triangle = expandable.querySelectorAll(".triangle")[0];
+        subMenu.classList.toggle("active");
+        triangle.classList.toggle("active")
+
+    })
+})
+
+function lockScroll() {
+    if(document.body.style.overflowY === "hidden"){
+        document.body.style.overflowY = 'visible';
+    }else{
+        document.body.style.overflowY = 'hidden';
+
+    }
+}
+
+document.body.addEventListener('click', (e) => {
+    if(e.target.closest(".nav-menu") || e.target.classList.contains("bar") || e.target.classList.contains("hamburger")) return;
+    if(navMenu.classList.contains("active")){
+        hamBurger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        lockScroll()
+    }
+})
 
 window.addEventListener('scroll', reveal)
 window.addEventListener('load', reveal)

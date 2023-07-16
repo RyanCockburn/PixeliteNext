@@ -12,7 +12,7 @@ const rubik = Rubik({
 export default function App({ Component, pageProps }) {
 
     useEffect(() => {
-      
+      document.body.style.overflowY = 'visible';
     })
     return (
     <main className={rubik.className}>

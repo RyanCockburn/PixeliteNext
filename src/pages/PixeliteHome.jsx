@@ -3,6 +3,7 @@ import React from "react";
 import Section from "../components/Section";
 
 import Lottie from "lottie-react";
+import Link from "next/link";
 import PixelitePage from "./PixelitePage";
 import pdIso from "/public/assets/pd-iso.json";
 
@@ -26,7 +27,7 @@ const Home = () => {
             need to take your business to the next level.
           </p>
         </div>
-        <Lottie class="lottie" animationData={pdIso}/>
+        <Lottie className="lottie" animationData={pdIso}/>
       </section>
       <div className="pixelite-background">
         <div className="combined-heading">
@@ -36,7 +37,7 @@ const Home = () => {
           </h1>
         </div>
         <div id="projects">
-          <div className="project-tile">
+          {/* <div className="project-tile">
             <svg
               width="36"
               height="36"
@@ -65,7 +66,7 @@ const Home = () => {
             </p>
             <a href="/branding"><button className="button">Learn More</button>
             </a>
-          </div>
+          </div> */}
           <div className="project-tile">
             <svg
               width="47"
@@ -207,6 +208,7 @@ const Home = () => {
         </div>
         <img src="assets/spotlight.png"></img>
       </section>
+      <div id="work">
       <div id="image-scroller">
         <ul className="scroller-slide">
           <img src="assets/clients/Vorex.png"></img>
@@ -228,6 +230,9 @@ const Home = () => {
           <img src="assets/clients/8WB.png"></img>
           <img src="assets/clients/iFry.png"></img>
         </ul>
+        
+      </div>
+      <Link href="/our-work"><button>View all of our work</button></Link>
       </div>
       <section className="pixelite-section right reveal">
         <img
@@ -236,22 +241,14 @@ const Home = () => {
         ></img>
         <div>
           <h1>
-            We help put your business in the{" "}
-            <span className="pixelite-blue">spotlight</span>
+            You're in the right place.
           </h1>
           <p>
-            We can help you like no other B2B company in the space. From start
-            to finish, and beyond, we hope to build long lasting connections
-            with yourself and your business.
-            <br />
-            <br />
-            Our specialists cater to your business’ specific needs. Let’s face
-            it, your business is like no other- so why should you receive a
-            template experience?
-            <br />
-            <br />
-            It’s one of core beliefs that, by doing the above, we can help your
-            business rise above the crowd.
+            At Pixelite, we thoroughly believe our team of professionals can help your business, regardless of the task at hand. Years of combined
+            experience mean informed strategies when tackling social media, your website and or any other project handed to us.
+            <br/><br/>
+            You can be assured that your business is in the right hands, and that choosing Pixelite is a decision that will help your business in
+            the short and long term.
           </p>
         </div>
         <img
@@ -263,21 +260,12 @@ const Home = () => {
         <div>
           <h1>
             Our <span className="pixelite-blue">latest</span> articles covering
-            the <span className="pixelite-blue">digital space</span>
+            the <span className="pixelite-blue">digital space.</span>
           </h1>
           <p>
-            We can help you like no other B2B company in the space. From start
-            to finish, and beyond, we hope to build long lasting connections
-            with yourself and your business.
-            <br />
-            <br />
-            Our specialists cater to your business’ specific needs. Let’s face
-            it, your business is like no other- so why should you receive a
-            template experience?
-            <br />
-            <br />
-            It’s one of core beliefs that, by doing the above, we can help your
-            business rise above the crowd.
+            Interested in the digital space? Interested in hearing our takes on topics regarding web design, development and digital marketing?
+            <br/><br/>
+            If so, our blog is for you. We dive into the latest news and topics that open up a platform for discussion on the topics that matter most.
           </p>
         </div>
         <img src="assets/picture-template.png"></img>
