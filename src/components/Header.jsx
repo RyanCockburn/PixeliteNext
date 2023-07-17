@@ -19,6 +19,40 @@ export default class Header extends React.Component {
     };
   }
 
+  lockScroll() {
+    if (document.body.style.overflowY === "hidden") {
+      document.body.style.overflowY = "visible";
+    } else {
+      document.body.style.overflowY = "hidden";
+      console.log("Locked scroll");
+    }
+  }
+
+  expand(expandable) {
+    expandable = expandable.target
+    const navItem = expandable.closest(".nav-item")
+    const subMenu = navItem.querySelectorAll(".sub-menu")[0];
+    const triangle = navItem.querySelectorAll(".triangle")[0];
+    console.log(navItem)
+    console.log(subMenu)
+    console.log(triangle)
+    subMenu.classList.toggle("active");
+    console.log(subMenu.classList)
+    triangle.classList.toggle("active");
+    console.log("Active?")
+    console.log(subMenu)
+    console.log(triangle)
+  }
+
+  hamburgerClick() {
+    const hamBurger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamBurger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    lockScroll();
+  }
+
   render() {
     return (
       <div id="upper-section">
@@ -40,14 +74,16 @@ export default class Header extends React.Component {
               </a>
             </li>
             <li className="nav-item">
-              <div className="nav-link expandable">
+              <div className="nav-link expandable" onClick={this.expand}>
                 <GlobeAltIcon className="h-24 w-24" />
                 <p>Services</p>
-                <div className="triangle"/>
+                <div className="triangle" />
               </div>
               <div className="sub-menu">
                 <div>
-                  <Link href="/web-design"><p>Web design & Development</p></Link>
+                  <Link href="/web-design">
+                    <p>Web design & Development</p>
+                  </Link>
                 </div>
                 <div>
                   <p>Social Media Management</p>
@@ -70,7 +106,7 @@ export default class Header extends React.Component {
             ></img>
           </a>
 
-          <div className="hamburger" onClick={this.hamburgerOperation}>
+          <div className="hamburger" onClick={this.hamburgerClick}>
             <span className="bar"></span>
             <span className="bar"></span>
             <span className="bar"></span>
