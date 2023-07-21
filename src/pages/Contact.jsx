@@ -14,7 +14,7 @@ const Contact = () => {
   var meta = {
     url: "/contact",
     description:
-      "About Pixelite Digital, a Digital Agency providing services in Web Design, Social Media Management and Branding",
+      "Have any queries? Don't hestitate to get in touch and we'll be more than happy to help.",
     title: "Contact",
   };
 
@@ -33,7 +33,7 @@ const Contact = () => {
             Look no further.
           </>
         }
-        mobileSubheader="The why, the how and the where"
+        mobileSubheader=""
       ></PixelitePage>
     </div>
   );

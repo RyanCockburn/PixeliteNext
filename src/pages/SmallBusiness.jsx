@@ -174,10 +174,10 @@ const About = () => {
   );
 
   var meta = {
-    url: "/about",
+    url: "/packages/small-business",
     description:
-      "About Pixelite Digital, a Digital Agency providing services in Web Design, Social Media Management and Branding",
-    title: "Small Business",
+      "Pixelite Digital's Small Business Package- the must-have package for all small businesses wanting to succeed in the digital space. Starting at just £149",
+    title: "Small Business Package",
   };
 
   return (
