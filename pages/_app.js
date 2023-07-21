@@ -13,7 +13,6 @@ export default function App({ Component, pageProps }) {
 
     useEffect(() => {
       document.body.style.overflowY = 'visible';
-      console.log(document.body.style.overflowY)
     })
     
     return (

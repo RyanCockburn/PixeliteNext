@@ -27,7 +27,7 @@ const Home = () => {
             need to take your business to the next level.
           </p>
         </div>
-        <Lottie className="lottie" animationData={pdIso}/>
+        <Lottie className="lottie left" animationData={pdIso}/>
       </section>
       <div className="pixelite-background">
         <div className="combined-heading">

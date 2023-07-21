@@ -1,11 +1,17 @@
 import Link from "next/link";
 import React from "react";
 
+
+import Image from "next/image";
+
+
+
 import {
+  ArchiveBoxIcon,
   GlobeAltIcon,
   HomeIcon,
   InformationCircleIcon,
-  PhoneIcon,
+  PhoneIcon
 } from "@heroicons/react/24/solid";
 
 export default class Header extends React.Component {
@@ -33,15 +39,8 @@ export default class Header extends React.Component {
     const navItem = expandable.closest(".nav-item")
     const subMenu = navItem.querySelectorAll(".sub-menu")[0];
     const triangle = navItem.querySelectorAll(".triangle")[0];
-    console.log(navItem)
-    console.log(subMenu)
-    console.log(triangle)
     subMenu.classList.toggle("active");
-    console.log(subMenu.classList)
     triangle.classList.toggle("active");
-    console.log("Active?")
-    console.log(subMenu)
-    console.log(triangle)
   }
 
   hamburgerClick() {
@@ -58,11 +57,11 @@ export default class Header extends React.Component {
       <div id="upper-section">
         <ul className="nav-menu">
           <div id="menu-header">
-            <img src="/assets/pixelite-digital-white-blue.png/" width="150" />
+            <Image src="/assets/PixeliteDigitalLogo.png" width="150" height="60"/>
           </div>
           <nav>
             <li className="nav-item">
-              <a href="/" className="nav-link">
+              <a href="../" className="nav-link">
                 <HomeIcon className="h-24 w-24" />
                 <p>Home</p>
               </a>
@@ -79,7 +78,7 @@ export default class Header extends React.Component {
                 <p>Services</p>
                 <div className="triangle" />
               </div>
-              <div className="sub-menu">
+              <div className="sub-menu active">
                 <div>
                   <Link href="/web-design">
                     <p>Web design & Development</p>
@@ -87,6 +86,20 @@ export default class Header extends React.Component {
                 </div>
                 <div>
                   <p>Social Media Management</p>
+                </div>
+              </div>
+            </li>
+            <li className="nav-item">
+              <div className="nav-link expandable" onClick={this.expand}>
+                <ArchiveBoxIcon className="h-24 w-24" />
+                <p>Packages</p>
+                <div className="triangle" />
+              </div>
+              <div className="sub-menu">
+                <div>
+                  <Link href="/packages/small-business">
+                    <p>Small Business Package</p>
+                  </Link>
                 </div>
               </div>
             </li>
@@ -99,9 +112,9 @@ export default class Header extends React.Component {
           </nav>
         </ul>
         <nav>
-          <a href="./">
+          <a href="../">
             <img
-              src="assets/pixelite-digital-white-blue.png"
+              src="/assets/PixeliteDigitalLogo.png"
               alt="Pixelite Digital Agency Logo"
             ></img>
           </a>

@@ -5,7 +5,7 @@ export default class Footer extends React.Component {
     render(){
         return (
             <div id="footer">
-                <img src="assets/pixelite-digital-white-blue.png"></img>
+                <img src="/assets/PixeliteDigitalLogo.png"></img>
                 <section id="what-we-do">
                     <h3>What we do</h3>
                     <ul>
@@ -21,10 +21,10 @@ export default class Footer extends React.Component {
                     </ul>
                 </section>
                 <div id="social-icons">
-                    <img src="assets/icons/facebook.png"/>
-                    <img src="assets/icons/twitter.png"/>
-                    <img src="assets/icons/instagram.png"/>
-                    <img src="assets/icons/linkedin.png"/>
+                    <img src="/assets/icons/facebook.png"/>
+                    <img src="/assets/icons/twitter.png"/>
+                    <img src="/assets/icons/instagram.png"/>
+                    <img src="/assets/icons/linkedin.png"/>
 
                 </div>
             </div>
