@@ -202,7 +202,7 @@ const About = () => {
             and take your business to the next level.
           </>
         }
-        mobileSubheader="You're in the right place. Starting at just £149, we provide everything your business could possibly need in the digital space."
+        mobileSubheader="Starting at just £149, we provide everything your business could possibly need in the digital space."
       ></PixelitePage>
     </div>
   );
