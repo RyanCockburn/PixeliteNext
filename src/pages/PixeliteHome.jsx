@@ -5,6 +5,7 @@ import Section from "../components/Section";
 import Lottie from "lottie-react";
 import Link from "next/link";
 import PixelitePage from "./PixelitePage";
+import Podium from "/public/assets/Podium.json";
 import pdIso from "/public/assets/pd-iso.json";
 
 const Home = () => {
@@ -188,8 +189,8 @@ const Home = () => {
       <section className="pixelite-section left reveal">
         <div>
           <h1>
-            We help put your business in the{" "}
-            <span className="pixelite-blue">spotlight.</span>
+            We help put your business on the{" "}
+            <span className="pixelite-blue">podium.</span>
           </h1>
           <p>
             We can help you like no other B2B business in the space. From start
@@ -206,7 +207,7 @@ const Home = () => {
             business rise above the crowd.
           </p>
         </div>
-        <img src="assets/spotlight.png"></img>
+        <Lottie className="lottie left" animationData={Podium}/>
       </section>
       <div id="work">
       <div id="image-scroller">

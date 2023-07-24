@@ -1,11 +1,11 @@
 import nodemailer from "nodemailer";
 
 export default async function ContactAPI (req, res) {
-    console.log("Reached")
 
     const {name, email, message} = req.body;
 
     const user = process.env.user;
+
 
 
     const data = {
@@ -22,6 +22,24 @@ export default async function ContactAPI (req, res) {
         }
     })
     try{
+        var failed = false;
+        if (data.name == undefined) {
+          failed = true;
+        }
+      
+        if (data.email == undefined) {
+            failed = true;
+        }
+      
+        if (data.message == undefined) {
+            failed = true;
+        }
+
+        if(failed) {
+            throw 500;
+        }
+      
+
         const mail = await transporter.sendMail({
             from: user,
             to: "business@pixelite.digital",
@@ -33,11 +51,10 @@ export default async function ContactAPI (req, res) {
             <p>Message: ${message}</p>
             `
         })
-        console.log("Message sent: ", mail.messageId)
-        return res.status(200).json({message: "success"})
+
+         return res.status(200).json({message: "success"})
     }catch (error){
-        console.log(error)
-        res.status(500).json({message: "Could not send email. Your message was not sent."})
+        res.status(error).json({message: "Could not send email. Your message was not sent."})
     }
     
 }

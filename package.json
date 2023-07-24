@@ -8,6 +8,7 @@
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@vercel/analytics": "^1.0.1",
+    "jquery": "^3.7.0",
     "lottie-react": "^2.4.0",
     "next": "latest",
     "nodemailer": "^6.9.4",

@@ -52,6 +52,17 @@ export default class Header extends React.Component {
     lockScroll();
   }
 
+  optionExpand(expandable){
+    expandable = expandable.target;
+    expandable.style.backgroundColor = "red";
+  }
+
+  optionShrink(expandable){
+    expandable = expandable.target;
+    expandable.style.backgroundColor = "blue";
+
+  }
+
   render() {
     return (
       <div id="upper-section">
@@ -125,9 +136,15 @@ export default class Header extends React.Component {
             <span className="bar"></span>
           </div>
           <div>
-            <p className="desktop-show">About</p>
-            <p className="desktop-show">Services</p>
-            <p className="desktop-show">Blog</p>
+            <Link href="/about"><p className="desktop-show">About</p></Link>
+            <Link href="/services"><p className="desktop-show">Services</p></Link>
+            <div className="nav-link expandable" onMouseOver={this.optionExpand} onMouseOut={this.optionShrink}>
+              <p className="desktop-show">Packages</p>
+              
+            </div>
+    
+            <Link href="/about"><p className="desktop-show">Blog</p></Link>
+            <Link href="/contact"><p className="desktop-show">Contact</p></Link>
           </div>
         </nav>
         <div id="hero">

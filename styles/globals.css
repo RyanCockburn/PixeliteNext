@@ -806,19 +806,75 @@ nav > a > img {
   border-radius: 11px;
   padding: 1rem;
   border: 3px solid #D9D9D9;
+  background-color: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
   margin-right: 0.25rem;
   margin-left: 0.25rem;
   display: flex;
   flex-direction: column;
   transition: transform 0.5s;
+  height: 675px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.case-study img {
+  margin: 0 auto;
+  width: 75%; 
+  height: 200px; 
+  object-fit: contain;
+}
+
+.case-study ul {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  max-height: 50px;
+  margin-bottom: 9rem;
+  padding-left: 0;
+}
+
+.case-study li {
+  display: inline;
+  margin: 0.5rem 0.5rem;
+}
+
+
+
+.case-study-image {
+  background-color: red;
+  height: 200px;
+  object-fit: contain;
+  object-fit: cover;
+  margin-top: 0.5rem;
+}
+
+
+.case-study .button {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  max-height: 50px;
+  margin-bottom: 2rem;
+  
 }
 
 #case-studies {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0 auto;
-  background-color: red;
+
 }
 
 #contact-us {
@@ -978,7 +1034,21 @@ input:focus, textarea:focus {
     height: 72px;
   }
 
+  #case-studies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1400px;
+    
+  }
 
+  .case-study {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  
+  }
   
   
 
@@ -1040,18 +1110,6 @@ input:focus, textarea:focus {
       padding-left: 5%;
   }
 
-  nav > div {
-      display: flex;
-      margin-right: 20%
-  }
-
-  nav > div > * {
-      color: white;
-      font-size: 19px;
-      margin-right: 10%;
-      margin-left: 10%;
-  }
-
   nav > div:last-child{
       margin-right: 10%;
   }
@@ -1059,6 +1117,28 @@ input:focus, textarea:focus {
   nav > p {
       color: white;
   }
+
+  nav div {
+    display: flex;
+
+  }
+
+  nav div > *{
+    display: flex;
+    margin: 0 2rem;
+  }
+
+  nav div p{
+    color: white;
+    font-size: 19px;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  nav 
+
+
+  
 
   .hamburger {
     display: none;

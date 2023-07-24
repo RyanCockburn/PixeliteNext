@@ -20,7 +20,7 @@ const About = () => {
   const content = (
     <div>
       <blockquote>
-        <h1>We're a business who thrives on growing your business</h1>
+        <h1>We're a business that thrives on growing your business</h1>
         <h5>-Pixelite Digital</h5>
       </blockquote>
       <section className="pixelite-section leftreveal">
