@@ -23,6 +23,7 @@ export default class PixelitePage extends React.Component {
             <div>
             <Head>
                 <meta charSet="utf-8"/>
+                <link rel="icon" type="image/x-icon" href="https://pixelite.digital/assets/pd-fancy.png"/>
                 <link rel="canonical" href={"https://pixelite.digital/" + this.props.meta.url}/>
                 <meta property="og:description" content={this.props.meta.description}/>
                 <meta name="description" content={this.props.meta.description}/>

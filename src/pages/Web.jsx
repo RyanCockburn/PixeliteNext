@@ -1,10 +1,13 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
+import { GlobeAltIcon } from "@heroicons/react/24/outline";
+import Lottie from "lottie-react";
 import Link from "next/link";
 import ContactForm from "../components/ContactForm";
 import PriceCard from "../components/PriceCard";
 import PixelitePage from "./PixelitePage";
+import BespokeWebsite from "/public/assets/BespokeWebsite.json";
 
 const Home = () => {
   const content = (
@@ -38,7 +41,7 @@ const Home = () => {
             your business.
           </p>
         </div>
-        <img src="assets/picture-template.png"></img>
+        <Lottie className="lottie" animationData={BespokeWebsite} />
       </section>
       <div className="reveal">
         <div className="combined-heading reveal">
@@ -135,20 +138,24 @@ const Home = () => {
               there. It’s an investment that will bring the best possible ROI
               for your business.
             </p>
-            <Link href="/our-work/8WB"><button class="button">View 8WB's case study</button></Link>
+            <Link href="/our-work/8WB">
+              <button class="button">View 8WB's case study</button>
+            </Link>
           </div>
-          <img src="assets/picture-template.png"></img>
+          <img src="/assets/clients/8WB.png"></img>
         </section>
       </div>
+
       <div id="why-us">
         <h1 className="combined-heading">
           <h1>Why choose Pixelite?</h1>
-          
         </h1>
         <div id="why-us-slides">
           <div>
             <div class="circle">1</div>
-            <h2><span class="pixelite-blue">Affordable</span></h2>
+            <h2>
+              <span class="pixelite-blue">Affordable</span>
+            </h2>
             <p>
               We understand that websites can be expensive. That's why we go far
               to ensure our websites are as affordable as possible, whilst still
@@ -158,7 +165,9 @@ const Home = () => {
           <div class="vl"></div>
           <div>
             <div class="circle">2</div>
-            <h2><span class="pixelite-blue">Fast & Efficient</span></h2>
+            <h2>
+              <span class="pixelite-blue">Fast & Efficient</span>
+            </h2>
             <p>
               Our tried-and-tested processes guarantee your website being
               delivered in the fastest time possible, whilst not skipping any
@@ -170,7 +179,9 @@ const Home = () => {
           <div class="vl"></div>
           <div>
             <div class="circle">3</div>
-            <h2><span class="pixelite-blue">Customised Solutions</span></h2>
+            <h2>
+              <span class="pixelite-blue">Customised Solutions</span>
+            </h2>
             <p>
               Your business isn't like any other, so why should your website be?
               We custom design and code every website we do, depending on the
@@ -181,7 +192,9 @@ const Home = () => {
           <div class="vl fill"></div>
           <div>
             <div class="circle">4</div>
-            <h2><span class="pixelite-blue">Proven Results</span></h2>
+            <h2>
+              <span class="pixelite-blue">Proven Results</span>
+            </h2>
             <p>
               Most of all, our solutions are proven to bring results. Regardless
               of the package you choose, you can rest easy knowing you have the
@@ -189,6 +202,35 @@ const Home = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div id="website-testimonials">
+        <h1 className="combined-heading">
+          <h1>Some of our previous clients</h1>
+          <p>
+            We've worked closely together with businesses in various industries
+            to make websites perfect for them.
+          </p>
+        </h1>
+        <Link target="_blank" href="https://www.the8wbclub.com">
+          <div class="website-testimonial">
+            <h1>The 8WB Club</h1>
+            <div class="testimonial-link">
+              <GlobeAltIcon className="h-24 w-24" />
+              <p>www.the8wbclub.com</p>
+            </div>
+            <img src="/assets/websites/8WB.png" />
+            <div class="testimonial-review">
+              <p>
+                Fantastic service from start to finish. Normally with business
+                nowadays it can take a coupe of days to even get a reply. These
+                guys are active & attentive. Mega quick replies! Got my my
+                approval & look forward to working together in the future again.
+                Thank you!
+              </p>
+              <h5>Ali Cunningham, Founder of 8WB</h5>
+            </div>
+          </div>
+        </Link>
       </div>
       <div className="packages">
         <div className="combined-heading reveal">
@@ -244,7 +286,7 @@ const Home = () => {
             key="website-premium"
           ></PriceCard>
         </div>
-        <ContactForm/>
+        <ContactForm />
       </div>
     </div>
   );
@@ -280,16 +322,18 @@ const Home = () => {
         }
         desktopSubheader={
           <>
-            There's no better to way to boost your digital presence than with
-            a website.<br/>
-            Even better, our websitse are affordable, user-friendly, and effective.
+            There's no better to way to boost your digital presence than with a
+            website.
+            <br />
+            Even better, our websitse are affordable, user-friendly, and
+            effective.
           </>
         }
-        mobileSubheader= {
+        mobileSubheader={
           <>
-          There's no better to way to boost your digital presence than with
-          a website.
-        </>
+            There's no better to way to boost your digital presence than with a
+            website.
+          </>
         }
       ></PixelitePage>
     </div>

@@ -704,6 +704,54 @@ nav > a > img {
   opacity: 1;
 }
 
+#website-testimonials .combined-heading {
+  margin-bottom: 2rem;
+}
+
+
+.website-testimonial {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.website-testimonial h1 {
+  margin-bottom: 0;
+}
+
+.website-testimonial img{
+  width: 90%;
+  max-width: 750px;
+}
+
+.testimonial-link {
+  display: flex;
+}
+
+.testimonial-link svg {
+  width: 24px;
+  margin-right: 1rem;
+}
+
+.testimonial-review {
+  margin-top: 2rem;
+  max-width: 600px;
+  width: 90%;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.testimonial-review p {
+  font-size: 1.1rem;
+}
+
+.testimonial-review p::before, .testimonial-review p::after {
+  content: "'";
+}
+
 
 
 

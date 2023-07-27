@@ -220,7 +220,7 @@ const Home = () => {
             </h2>
             <h3>Starting at just £50</h3>
             <p>
-              Is your business <span class="pixelite-blue">struggling with social media?</span> Or maybe you don't have time to manage it? We can help you out. With <span class="pixelite-blue">prices as low as £40</span>, we can handle your social media so you can focus more on your business.
+              Is your business <span class="pixelite-blue">struggling with social media?</span> Or maybe you don't have time to manage it? We can help you out. With <span class="pixelite-blue">prices as low as £50</span>, we can handle your social media so you can focus more on your business.
             </p>
             <Link href="/packages/social-media"><button class="button">Find out more</button></Link>
           </div>

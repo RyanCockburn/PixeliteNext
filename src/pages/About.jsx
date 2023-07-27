@@ -5,6 +5,7 @@ import Section from "../components/Section";
 import Lottie from "lottie-react";
 import Link from "next/link";
 import PixelitePage from "./PixelitePage";
+import ValuesIcon from "/public/assets/ValuesIcon.json";
 import pdIso from "/public/assets/pd-iso.json";
 import pixeliteLocation from "/public/assets/pixelite_location.json";
 
@@ -42,7 +43,7 @@ const About = () => {
         <Lottie className="lottie" animationData={pdIso} />
       </section>
       <section className="pixelite-section right reveal">
-        <img src="assets/picture-template.png" className="desktop-show"></img>
+      <Lottie className="lottie right desktop-show" animationData={ValuesIcon} />
         <div>
           <h1><span class="pixelite-blue">Our values</span></h1>
           <p>
@@ -54,10 +55,7 @@ const About = () => {
             We also pride ourselves in offering transparent services to all, regardless of technical expertise.
           </p>
         </div>
-        <img
-          src="assets/picture-template.png"
-          className="stats-smallscreen"
-        ></img>
+        <Lottie className="lottie right stats-smallscreen" animationData={ValuesIcon} />
       </section>
       
       <div id="drive" class="combined-heading">
