@@ -30,9 +30,11 @@ const Home = () => {
             and marketing in the UK and beyond. Pixelite can be the step you
             need to take your business to the next level.
           </p>
-          <Link href="/about"><button class="button">Find out more about us</button></Link>
+          <Link href="/about">
+            <button class="button">Find out more about us</button>
+          </Link>
         </div>
-        <Lottie className="lottie left" animationData={pdIso}/>
+        <Lottie className="lottie left" animationData={pdIso} />
       </section>
       <div className="reveal">
         <div className="combined-heading reveal">
@@ -192,39 +194,46 @@ const Home = () => {
       </div>
       <div className="reveal">
         <div className="combined-heading reveal">
-          <h1>
-            Packages we offer
-          </h1>
+          <h1>Packages we offer</h1>
           <p>
-            We offer a range of packages, often at a discounted price, aimed at giving your business the best chance in the digital space. 
+            We offer a range of packages, often at a discounted price, aimed at
+            giving your business the best chance in the digital space.
           </p>
         </div>
 
         <div id="why-list">
           <div>
-          <BriefcaseIcon className="h-24 w-24" />
-            <h2>
-              Small Business Package
-            </h2>
+            <BriefcaseIcon className="h-24 w-24" />
+            <h2>Small Business Package</h2>
             <h3>Starting at just £199</h3>
             <p>
-              Want a website and graphics without breaking the bank? This package is for you. <span class="pixelite-blue">Starting at just £199</span>, this package provides you 
-              with <span class="pixelite-blue">everything</span> you need to gain a digital presence.
+              Want a website and graphics without breaking the bank? This
+              package is for you.{" "}
+              <span class="pixelite-blue">Starting at just £199</span>, this
+              package provides you with{" "}
+              <span class="pixelite-blue">everything</span> you need to gain a
+              digital presence.
             </p>
-            <Link href="/packages/small-business"><button class="button">Find out more</button></Link>
+            <Link href="/packages/small-business">
+              <button class="button">Find out more</button>
+            </Link>
           </div>
           <div>
-          <MegaphoneIcon className="h-24 w-24" />
-            <h2>
-              Social Media Package
-            </h2>
+            <MegaphoneIcon className="h-24 w-24" />
+            <h2>Social Media Package</h2>
             <h3>Starting at just £50</h3>
             <p>
-              Is your business <span class="pixelite-blue">struggling with social media?</span> Or maybe you don't have time to manage it? We can help you out. With <span class="pixelite-blue">prices as low as £50</span>, we can handle your social media so you can focus more on your business.
+              Is your business{" "}
+              <span class="pixelite-blue">struggling with social media?</span>{" "}
+              Or maybe you don't have time to manage it? We can help you out.
+              With <span class="pixelite-blue">prices as low as £50</span>, we
+              can handle your social media so you can focus more on your
+              business.
             </p>
-            <Link href="/packages/social-media"><button class="button">Find out more</button></Link>
+            <Link href="/packages/social-media">
+              <button class="button">Find out more</button>
+            </Link>
           </div>
-  
         </div>
       </div>
 
@@ -249,48 +258,56 @@ const Home = () => {
             business rise above the crowd.
           </p>
         </div>
-        <Lottie className="lottie left" animationData={Podium}/>
+        <Lottie className="lottie left" animationData={Podium} />
       </section>
       <div id="work">
-      <div id="image-scroller">
-        <ul className="scroller-slide">
-          <img src="assets/clients/Vorex.png"></img>
-          <img src="assets/clients/8WB.png"></img>
-          <img src="assets/clients/iFry.png"></img>
-        </ul>
-        <ul className="scroller-slide">
-          <img src="assets/clients/Vorex.png"></img>
-          <img src="assets/clients/8WB.png"></img>
-          <img src="assets/clients/iFry.png"></img>
-        </ul>
-        <ul className="scroller-slide">
-          <img src="assets/clients/Vorex.png"></img>
-          <img src="assets/clients/8WB.png"></img>
-          <img src="assets/clients/iFry.png"></img>
-        </ul>
-        <ul className="scroller-slide">
-          <img src="assets/clients/Vorex.png"></img>
-          <img src="assets/clients/8WB.png"></img>
-          <img src="assets/clients/iFry.png"></img>
-        </ul>
-        
-      </div>
-      <Link href="/our-work"><button>View all of our work</button></Link>
+        <div id="image-scroller">
+          <ul className="scroller-slide">
+            <img src="assets/clients/Vorex_Services.png"></img>
+            <img src="assets/clients/8WB.png"></img>
+            <img src="assets/clients/iFry.png"></img>
+            <img src="assets/clients/Notion_Commotion.png"></img>
+            <img src="assets/clients/PvPWars.png"></img>
+          </ul>
+          <ul className="scroller-slide">
+            <img src="assets/clients/Vorex_Services.png"></img>
+            <img src="assets/clients/8WB.png"></img>
+            <img src="assets/clients/iFry.png"></img>
+            <img src="assets/clients/Notion_Commotion.png"></img>
+            <img src="assets/clients/PvPWars.png"></img>
+          </ul>
+          <ul className="scroller-slide">
+            <img src="assets/clients/Vorex_Services.png"></img>
+            <img src="assets/clients/8WB.png"></img>
+            <img src="assets/clients/iFry.png"></img>
+            <img src="assets/clients/Notion_Commotion.png"></img>
+            <img src="assets/clients/PvPWars.png"></img>
+          </ul>
+          <ul className="scroller-slide">
+            <img src="assets/clients/Vorex_Services.png"></img>
+            <img src="assets/clients/8WB.png"></img>
+            <img src="assets/clients/iFry.png"></img>
+            <img src="assets/clients/Notion_Commotion.png"></img>
+            <img src="assets/clients/PvPWars.png"></img>
+          </ul>
+        </div>
+        <Link href="/our-work">
+          <button id="work-button">See more of our work</button>
+        </Link>
       </div>
       <section className="pixelite-section right reveal">
-        <img
-          src="assets/RightHands-Graphic.png"
-          className="desktop-show"
-        ></img>
+        <img src="assets/RightHands-Graphic.png" className="desktop-show"></img>
         <div>
-          <h1>
-            You're in safe hands.
-          </h1>
+          <h1>You're in safe hands.</h1>
           <p>
-            At Pixelite, we thoroughly believe our team of professionals can help your business, regardless of the task at hand. Years of combined
-            experience mean informed strategies when tackling social media, your website and or any other project handed to us.
-            <br/><br/>
-            You can be assured that your business is in the right hands, and that choosing Pixelite is a decision that will help your business in
+            At Pixelite, we thoroughly believe our team of professionals can
+            help your business, regardless of the task at hand. Years of
+            combined experience mean informed strategies when tackling social
+            media, your website and or any other project handed to us.
+            <br />
+            <br />
+            You can be assured that your business is in the right hands, and
+            that choosing Pixelite is a decision that will help your business in
             the short and long term.
           </p>
         </div>
@@ -306,50 +323,61 @@ const Home = () => {
             the <span className="pixelite-blue">digital space.</span>
           </h1>
           <p>
-            Interested in the digital space? Interested in hearing our takes on topics regarding web design, development and digital marketing?
-            <br/><br/>
-            If so, our blog is for you. We dive into the latest news and topics that open up a platform for discussion on the topics that matter most.
+            Interested in the digital space? Interested in hearing our takes on
+            topics regarding web design, development and digital marketing?
+            <br />
+            <br />
+            If so, our blog is for you. We dive into the latest news and topics
+            that open up a platform for discussion on the topics that matter
+            most.
           </p>
-          <Link href="/blog"><button class="button">Browse articles</button></Link>
+          <Link href="/blog">
+            <button class="button">Browse articles</button>
+          </Link>
         </div>
-        <Lottie className="lottie left" animationData={LatestArticles}/>
+        <Lottie className="lottie left" animationData={LatestArticles} />
       </section>
     </div>
   );
 
-  var meta = {url: "", 
-          description: "Pixelite Digital, providing digital services to help your business grow",
-          title: "Home"}
+  var meta = {
+    url: "",
+    description:
+      "Pixelite Digital, providing digital services to help your business grow",
+    title: "Home",
+  };
 
   return (
     <div>
       <PixelitePage
         title="Pixelite Digital"
-        meta = {meta}
+        meta={meta}
         page={content}
-        desktopHeader={<>
-          <span className="pixelite-white">We provide</span> digital services
-          <br /> <span className="pixelite-white">
-            {" "}
-            to help your business
-          </span>{" "}
-          grow
-        </>}
-        mobileHeader={<>
-          <span className="pixelite-white">
-            Let's <span className="pixelite-blue">grow</span>{" "}
-            <br className="mobile-break" />
-            your business <br className="mobile-break" />
-            <span className="pixelite-blue">together</span>.
-          </span>
-        </>}
-        desktopSubheader={<>
-          Need help in digital marketing, website design or branding?{" "}
-          <br className="desktop-break" />
-          Look no further.
-        </>}
+        desktopHeader={
+          <>
+            <span className="pixelite-white">We provide</span> digital services
+            <br />{" "}
+            <span className="pixelite-white"> to help your business</span> grow
+          </>
+        }
+        mobileHeader={
+          <>
+            <span className="pixelite-white">
+              Let's <span className="pixelite-blue">grow</span>{" "}
+              <br className="mobile-break" />
+              your business <br className="mobile-break" />
+              <span className="pixelite-blue">together</span>.
+            </span>
+          </>
+        }
+        desktopSubheader={
+          <>
+            Need help in digital marketing, website design or branding?{" "}
+            <br className="desktop-break" />
+            Look no further.
+          </>
+        }
         mobileSubheader=""
-
       ></PixelitePage>
     </div>
   );

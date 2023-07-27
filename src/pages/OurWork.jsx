@@ -40,16 +40,22 @@ const OurWork = () => {
     },
   ];
 
+  var total = 0;
+
   const content = (
     <div>
       <div id="case-studies">
+        
         {transformations.map((transformation) => {
+          total +=1;
+          var isLeft = total % 2 == 0
           return (
             <CaseStudy
               name={transformation.name}
               location={transformation.location}
               categories={transformation.categories}
               description={transformation.description}
+              isLeft = {isLeft}
             />
           );
         })}

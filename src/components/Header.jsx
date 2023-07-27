@@ -117,6 +117,9 @@ export default class Header extends React.Component {
                   <Link href="/packages/small-business">
                     <p>Small Business Package</p>
                   </Link>
+                  <Link href="/packages/social-media">
+                    <p>Social Media Package</p>
+                  </Link>
                 </div>
               </div>
             </li>
