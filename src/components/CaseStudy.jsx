@@ -66,23 +66,9 @@ export default class CaseStudy extends React.Component {
     var hasOwnPage = this.state.hasOwnPage;
     return (
       <div className="case-study">
-        <h4>{this.name}</h4>
         <div className="case-study-image">
           <img src={`/assets/clients/${this.getName()}-Logo.png`} />
         </div>
-        <p>{this.location}</p>
-        <br />
-        <p>{`${this.description}`}</p>
-        <ul className="categories">
-          {this.categories.map((category) => (
-            <li key={category}>{category}</li>
-          ))}
-        </ul>
-        {hasOwnPage ? (
-          <a href={this.url}>
-            <button className="button">Learn More</button>
-          </a>
-        ) : null}
       </div>
     );
   }

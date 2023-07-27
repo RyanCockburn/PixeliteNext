@@ -195,14 +195,14 @@ const About = () => {
         mobileHeader={<>Are you a small business?</>}
         desktopSubheader={
           <>
-            You're in the right place. Starting at just £149, our Small Business
+            You're in the right place. Starting at just £199, our Small Business
             <br />
             Package allows your business to establish a strong online presence
             <br />
             and take your business to the next level.
           </>
         }
-        mobileSubheader="Starting at just £149, we provide everything your business could possibly need in the digital space."
+        mobileSubheader="Give your business a fighting chance in the digital space from just £199"
       ></PixelitePage>
     </div>
   );

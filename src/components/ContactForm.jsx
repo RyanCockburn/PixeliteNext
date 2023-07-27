@@ -77,20 +77,17 @@ function validateEmail(mail) {
 export default class ContactForm extends React.Component {
   constructor(props) {
     super(props);
+    this.long = props.long;
   }
 
   render() {
     return (
       <div id="contact-us">
         <div class="combined-heading">
-          <h1>Contact Us</h1>
+          <h1>We would love to hear from you.</h1>
           <p>Have any queries? Don't hestitate to get in touch and we'll be more than happy to help.</p>
           <div>
-            <PhoneIcon className="h-24 w-24 pixelite-blue"/>
             <p>00000 000000</p>
-          </div>
-          <div>
-            <EnvelopeIcon className="h-24 w-24 pixelite-blue"/>
             <p>contact@pixelite.digital</p>
           </div>
         </div>

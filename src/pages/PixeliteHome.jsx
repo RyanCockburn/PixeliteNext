@@ -2,9 +2,12 @@ import React from "react";
 
 import Section from "../components/Section";
 
+import { BriefcaseIcon, MegaphoneIcon } from "@heroicons/react/24/outline";
+
 import Lottie from "lottie-react";
 import Link from "next/link";
 import PixelitePage from "./PixelitePage";
+import LatestArticles from "/public/assets/LatestArticles.json";
 import Podium from "/public/assets/Podium.json";
 import pdIso from "/public/assets/pd-iso.json";
 
@@ -27,9 +30,58 @@ const Home = () => {
             and marketing in the UK and beyond. Pixelite can be the step you
             need to take your business to the next level.
           </p>
+          <Link href="/about"><button class="button">Find out more about us</button></Link>
         </div>
         <Lottie className="lottie left" animationData={pdIso}/>
       </section>
+      <div className="reveal">
+        <div className="combined-heading reveal">
+          <h1>
+            <span className="pixelite-grey">We're your</span> go-to
+            <br /> <span className="pixelite-grey">for</span> all things
+            digital.
+          </h1>
+          <p>
+            Want to grow your business in the online space? We can help. With a
+            wide range of services to help your business thrive, what are you
+            waiting for?
+          </p>
+        </div>
+
+        <div id="why-list">
+          <div>
+            <img src="assets/icons/social-circle.svg" />
+            <h2>
+              Grow Your <span className="pixelite-blue">Reach</span>
+            </h2>
+            <p>
+              Reach more of your target audience effectively with Pixelite’s
+              Digital Marketing campaigns
+            </p>
+          </div>
+          <div>
+            <img src="assets/icons/revenue-increase.svg" />
+            <h2>
+              Grow Your <span className="pixelite-blue">Revenue</span>
+            </h2>
+            <p>
+              Convert more customers than ever before through optimised, bespoke
+              websites designed for success.
+            </p>
+          </div>
+          <div>
+            <img src="assets/icons/business-growth.svg" />
+            <h2>
+              Grow Your <span className="pixelite-blue">Business</span>
+            </h2>
+            <p>
+              Let your business embrace its full potential by choosing Pixelite
+              to handle all things digital.
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className="pixelite-background">
         <div className="combined-heading">
           <h2>What we're best at</h2>
@@ -141,48 +193,38 @@ const Home = () => {
       <div className="reveal">
         <div className="combined-heading reveal">
           <h1>
-            <span className="pixelite-grey">We're your</span> go-to
-            <br /> <span className="pixelite-grey">for</span> all things
-            digital.
+            Packages we offer
           </h1>
           <p>
-            Want to grow your business in the online space? We can help. With a
-            wide range of services to help your business thrive, what are you
-            waiting for?
+            We offer a range of packages, often at a discounted price, aimed at giving your business the best chance in the digital space. 
           </p>
         </div>
 
         <div id="why-list">
           <div>
-            <img src="assets/icons/social-circle.svg" />
+          <BriefcaseIcon className="h-24 w-24" />
             <h2>
-              Grow Your <span className="pixelite-blue">Reach</span>
+              Small Business Package
             </h2>
+            <h3>Starting at just £199</h3>
             <p>
-              Reach more of your target audience effectively with Pixelite’s
-              Digital Marketing campaigns
+              Want a website and graphics without breaking the bank? This package is for you. <span class="pixelite-blue">Starting at just £199</span>, this package provides you 
+              with <span class="pixelite-blue">everything</span> you need to gain a digital presence.
             </p>
+            <Link href="/packages/small-business"><button class="button">Find out more</button></Link>
           </div>
           <div>
-            <img src="assets/icons/revenue-increase.svg" />
+          <MegaphoneIcon className="h-24 w-24" />
             <h2>
-              Grow Your <span className="pixelite-blue">Revenue</span>
+              Social Media Package
             </h2>
+            <h3>Starting at just £50</h3>
             <p>
-              Convert more customers than ever before through optimised, bespoke
-              websites designed for success.
+              Is your business <span class="pixelite-blue">struggling with social media?</span> Or maybe you don't have time to manage it? We can help you out. With <span class="pixelite-blue">prices as low as £40</span>, we can handle your social media so you can focus more on your business.
             </p>
+            <Link href="/packages/social-media"><button class="button">Find out more</button></Link>
           </div>
-          <div>
-            <img src="assets/icons/business-growth.svg" />
-            <h2>
-              Grow Your <span className="pixelite-blue">Business</span>
-            </h2>
-            <p>
-              Let your business embrace its full potential by choosing Pixelite
-              to handle all things digital.
-            </p>
-          </div>
+  
         </div>
       </div>
 
@@ -237,12 +279,12 @@ const Home = () => {
       </div>
       <section className="pixelite-section right reveal">
         <img
-          src="assets/picture-template.png"
+          src="assets/RightHands-Graphic.png"
           className="desktop-show"
         ></img>
         <div>
           <h1>
-            You're in the right place.
+            You're in safe hands.
           </h1>
           <p>
             At Pixelite, we thoroughly believe our team of professionals can help your business, regardless of the task at hand. Years of combined
@@ -253,7 +295,7 @@ const Home = () => {
           </p>
         </div>
         <img
-          src="assets/picture-template.png"
+          src="assets/RightHands-Graphic.png"
           className="stats-smallscreen"
         ></img>
       </section>
@@ -268,8 +310,9 @@ const Home = () => {
             <br/><br/>
             If so, our blog is for you. We dive into the latest news and topics that open up a platform for discussion on the topics that matter most.
           </p>
+          <Link href="/blog"><button class="button">Browse articles</button></Link>
         </div>
-        <img src="assets/picture-template.png"></img>
+        <Lottie className="lottie left" animationData={LatestArticles}/>
       </section>
     </div>
   );

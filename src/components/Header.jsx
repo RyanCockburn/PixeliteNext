@@ -53,13 +53,19 @@ export default class Header extends React.Component {
   }
 
   optionExpand(expandable){
-    expandable = expandable.target;
-    expandable.style.backgroundColor = "red";
+    const target = expandable.target;
+    const navLink = target.closest(".nav-link")
+    const subMenu = navLink.querySelectorAll(".desktop-sub-menu")[0];
+    subMenu.classList.toggle("active");
+    console.log(navLink)
   }
 
   optionShrink(expandable){
-    expandable = expandable.target;
-    expandable.style.backgroundColor = "blue";
+    const target = expandable.target;
+    const navLink = target.closest(".nav-link")
+    const subMenu = navLink.querySelectorAll(".desktop-sub-menu")[0];
+    subMenu.classList.toggle("active");
+    console.log(navLink)
 
   }
 
@@ -137,13 +143,38 @@ export default class Header extends React.Component {
           </div>
           <div>
             <Link href="/about"><p className="desktop-show">About</p></Link>
-            <Link href="/services"><p className="desktop-show">Services</p></Link>
+            <div className="nav-link expandable" onMouseOver={this.optionExpand} onMouseOut={this.optionShrink}>
+              <p className="desktop-show">Services</p>
+              <div className="desktop-sub-menu">
+                <div>
+                  <Link href="/web-design">
+                    <p>Web Design & Development</p>
+                  </Link>
+                </div>
+                <div>
+                  <Link href="/social-media">
+                    <p>Social Media</p>
+                  </Link>
+                </div>
+              </div>
+            </div>
             <div className="nav-link expandable" onMouseOver={this.optionExpand} onMouseOut={this.optionShrink}>
               <p className="desktop-show">Packages</p>
-              
+              <div className="desktop-sub-menu">
+                <div>
+                  <Link href="/packages/small-business">
+                    <p>Small Business Package</p>
+                  </Link>
+                </div>
+                <div>
+                  <Link href="/packages/social-media">
+                    <p>Social Media Package</p>
+                  </Link>
+                </div>
+              </div>
             </div>
     
-            <Link href="/about"><p className="desktop-show">Blog</p></Link>
+
             <Link href="/contact"><p className="desktop-show">Contact</p></Link>
           </div>
         </nav>

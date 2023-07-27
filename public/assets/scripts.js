@@ -17,6 +17,7 @@ function getNextStatistic() {
   setTimeout(getNextStatistic, 3500);
 }
 
+
 function updateStatisticDisplay(amount, title) {
   var statisticDiv = document.getElementById("statistics-container");
   var numberHeader = statisticDiv.getElementsByClassName("countup")[0];
@@ -72,12 +73,21 @@ function isInViewport(element) {
 
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
+  var fills = document.querySelectorAll(".fill");
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var revealTop = reveals[i].getBoundingClientRect().top;
     var revealPoint = 150;
     if (revealTop < windowHeight - revealPoint) {
       reveals[i].classList.add("active");
+    }
+  }
+  for (var i = 0; i < fills.length; i++) {
+    var windowHeight = window.innerHeight;
+    var revealTop = fills[i].getBoundingClientRect().top;
+    var revealPoint = 150;
+    if (revealTop < windowHeight - revealPoint) {
+      fills[i].classList.add("filled");
     }
   }
 }
@@ -110,6 +120,16 @@ document.body.addEventListener("click", (e) => {
   }
 });
 
+window.onresize = function(){
+  if(window.innerWidth >= 992 && navMenu.classList.contains("active")){
+    hamBurger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    lockScroll();
+  }
+}
+
+
 window.addEventListener("scroll", reveal);
 window.addEventListener("load", reveal);
 window.addEventListener("load", countupAll);
+window.addEventListener("load", updateQuestionHeader)
