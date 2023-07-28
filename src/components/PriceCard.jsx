@@ -25,7 +25,7 @@ export default class PriceCard extends React.Component {
                 {this.isAdvanced() ? console.log("Advanced") : console.log("not")}
                 <h3><span className={this.isAdvanced() ? "pixelite-blue" : "pixelite-grey"}>{this.package}</span></h3>
                 <p>{this.catchPhrase}</p>
-                <h2><span className="price-small">£</span><span className={this.isAdvanced() ? "pixelite-blue" : "pixelite-grey"}>{this.price}</span></h2>
+                <h2><span className="price-small">£</span>{this.price}</h2>
                 <ul>
                 {this.benefits.map(benefit => <div key={benefit}><img src="assets/icons/checkmark.svg"/><li>{benefit}</li></div>)}
                 </ul>

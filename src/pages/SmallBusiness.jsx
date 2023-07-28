@@ -137,6 +137,8 @@ const About = () => {
               To sweeten the deal, we include a free 1 year domain in this package. We'll purchase it for you, set it up and transfer it- no hassle.
               <p class="hidden active">
                 After the 1 year period, you'll be responsible for renewing the domain from the domain name provider. This usually costs ~£10 for a year, although prices may vary.
+                <br/><br/>
+                *Please note that, this feature excludes premium domains and only includes domains that are unique, and exclusive to your business.
               </p>
             </p>
             <div class="learn-more" onClick={optionExpand}>
@@ -211,6 +213,7 @@ const About = () => {
             reach this growing audience.
           </p>
         </div>
+        
         <div>
           <MagnifyingGlassIcon className="h-24 w-24" />
           <h2>
@@ -257,7 +260,6 @@ const About = () => {
           </p>
         </div>
       </div>
-      <h1 class="pixelite-header">Interested?</h1>
       <ContactForm/>
     </div>
   );
