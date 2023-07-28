@@ -18,7 +18,10 @@ const Home = () => {
           <h1>Are you ready to take your business to the next level?</h1>
           <h1>... and don't want to spend a fortune?</h1>
         </div>
-        <h2>You're in the right place.</h2>
+        <div id="low-prices">
+        <h1 class="pixelite-heading pixelite-blue">Websites from just £199.</h1>
+        <Link href="#small-business-package "><button class="button">Find out more</button></Link>
+        </div>
       </div>
       <section className="pixelite-section left reveal">
         <div>
@@ -232,12 +235,37 @@ const Home = () => {
           </div>
         </Link>
       </div>
-      <div className="packages">
+      <div id="small-business-package">
+        <div class="combined-heading">
+          <h1>Small Business Package</h1>
+          <p>Are you a small business? Are you wanting a simple yet effective website whilst on a budget? We have the perfect package for you.</p>
+        </div>
+        <section className="pixelite-section left reveal">
+        <div>
+          <h1>
+            <span className="pixelite-blue">The best way to get your business started online.</span>
+          </h1>
+          <p>
+            For just £199, give your business everything it needs to get started online. This package includes:
+            <ul>
+              <li>Bespoke Wix Website</li>
+              <li>FREE domain</li>
+              <li>2 Promotional Graphics</li>
+              <li>Basic SEO</li>
+              <li>Specialist Support</li>
+            </ul>
+            <Link href="/packages/small-business"><button class="button">Learn more</button></Link>
+          </p>
+        </div>
+        <img src="/assets/Pixelite-Small-Business-Package.png"/>
+      </section>
+      </div>
+      <div id="website-prices" className="packages">
         <div className="combined-heading reveal">
           <h1>Choose the package that best suits you</h1>
           <p>
-            The below packages all incorporate essential features that you and
-            your business can use to maximise the possibilities of your website.
+            Need a fully unique website? Maybe your ideas go beyond the scope of a Wix website. These packages 
+            are perfect for you.
           </p>
         </div>
         <div className="prices">
@@ -245,7 +273,7 @@ const Home = () => {
             service="web-design"
             package="Basic"
             catchPhrase="Suitable for Startups and businesses with basic needs"
-            price="450"
+            price="300"
             benefits={[
               "4 Page Website",
               "User & Mobile Friendly",
@@ -259,7 +287,7 @@ const Home = () => {
             service="web-design"
             package="Advanced"
             catchPhrase="Suitable for Startups and businesses with basic needs"
-            price="700"
+            price="625"
             benefits={[
               "7 Page Website",
               "User & Mobile Friendly",
@@ -274,7 +302,7 @@ const Home = () => {
             service="web-design"
             package="Premium"
             catchPhrase="Suitable for Startups and businesses with basic needs"
-            price="949"
+            price="849"
             benefits={[
               "10 Page Website",
               "User & Mobile Friendly",
@@ -301,7 +329,7 @@ const Home = () => {
   return (
     <div>
       <PixelitePage
-        title="Pixelite | Web Design"
+        title="Web Design"
         meta={meta}
         page={content}
         desktopHeader={

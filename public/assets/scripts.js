@@ -106,6 +106,7 @@ function lockScroll() {
   }
 }
 
+
 document.body.addEventListener("click", (e) => {
   if (
     e.target.closest(".nav-menu") != null ||

@@ -1,4 +1,6 @@
-html,
+html {
+  scroll-behavior: smooth !important;
+}
 :root {
   --pixelite-blue: #007DE9;
   --pixelite-grey: #373737;
@@ -92,7 +94,17 @@ a {
 }
 
 
+#low-prices {
+  margin: 4rem 0;
+}
 
+#small-business-package .combined-heading {
+  margin-bottom: 3rem;
+}
+
+#small-business-package .button {
+  margin-top: 2rem;
+}
 
 
 
@@ -123,6 +135,14 @@ p {
   color: var(--pixelite-blue);
   font-weight: 450;
   font-size: 2.8rem;
+}
+
+.hidden.active{
+  display: none;
+}
+
+.hidden {
+  display: ;
 }
 
 .button {
@@ -917,25 +937,43 @@ nav > a > img {
   padding-top: 2rem;
 }
 
-#footer > img {
+
+#footer #legal ul{
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+#footer #legal {
+  padding-bottom: 3rem;
+}
+
+#footer-container > img {
   width: 30%;
   max-width: 150px;
 }
 
-#footer > section {
+
+
+#footer-container > div {
   margin: auto;
   text-align: center;
    
 }
 
-#footer > section > ul {
+#footer a, #footer ul {
   list-style-type: none;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   padding-left: 0;
-  color: var(--pixelite-offwhite);
+  color: #E2E2E2;
 }
 
-#footer > section > h3{
+#footer-sections  h3{
   color: var(--pixelite-offwhite);
   font-size: 1.3rem;
   margin-top: 1.2rem;
@@ -943,12 +981,20 @@ nav > a > img {
 }
 
 
-#footer #social-icons > img{
-  width: 5%;
-  max-width: 40px;
-  padding: 1.1rem;
-
+#footer #social-icons {
+  width: 100%;
+  max-width: 200px;
+  
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
 }
+
+#footer #social-icons img {
+  max-width: 24px;
+}
+
 
 #why-list > div > img{
   width: 72px;
@@ -1013,6 +1059,7 @@ nav > a > img {
   margin: 0rem 0;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 #contact-us .combined-heading div svg {
@@ -1087,6 +1134,27 @@ input:focus, textarea:focus {
 
 @media (min-width: 768px) { 
 
+  #contact-us .combined-heading div {
+    flex-direction: row;
+  }
+
+  #footer-sections {
+    display: flex;
+    justify-content: center;
+  }
+
+  #footer-container > div {
+    margin: auto;
+    text-align: left;
+     
+  }
+
+  #footer-sections div:not(#social-icons){
+    padding: 2rem;
+  }
+
+  
+
   
   .mobile-show {
       display: none;
@@ -1137,7 +1205,7 @@ input:focus, textarea:focus {
     font-size: 2.3rem;
     font-weight: 500;
   }
-  .pixelite-section > div > p {
+  .pixelite-section p {
     font-size: 1.2rem;
     line-height: 1.8rem;
   }
@@ -1167,12 +1235,16 @@ input:focus, textarea:focus {
   .combined-heading {
     margin-top: 4rem;
   }
+
+  
   
   
 
 
 }
 @media (min-width: 992px) { 
+
+
 
   #case-studies {
     margin: 0 auto;

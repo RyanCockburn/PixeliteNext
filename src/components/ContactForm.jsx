@@ -87,7 +87,7 @@ export default class ContactForm extends React.Component {
           <h1>We would love to hear from you.</h1>
           <p>Have any queries? Don't hestitate to get in touch and we'll be more than happy to help.</p>
           <div>
-            <p>00000 000000</p>
+            <p>07305 383169</p>
             <p>contact@pixelite.digital</p>
           </div>
         </div>
