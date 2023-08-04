@@ -12,11 +12,13 @@ import {
 } from "@heroicons/react/24/outline";
 import Lottie from "lottie-react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import ContactForm from "../components/ContactForm";
 import PriceCard from "../components/PriceCard";
+import RangeSlider from "../components/RangeSlider";
 import PixelitePage from "./PixelitePage";
 import BespokeWebsite from "/public/assets/BespokeWebsite.json";
-
+import SocialMedia from "/public/assets/SocialMedia.json";
 var currentProcess = 0;
 function nextProceess(clicked) {
   var target = clicked.target;
@@ -222,7 +224,7 @@ const Home = () => {
             happy to cater towards the need of your business!
           </p>
         </div>
-        <img src="/assets/Promotional-Graphic.png"></img>
+        <Lottie className="lottie" animationData={SocialMedia} />
       </section>
       <div id="why-us">
         <h1 className="combined-heading">
@@ -268,8 +270,8 @@ const Home = () => {
             <h3>Results</h3>
             <p>
               This is the exciting stage- the stage where you see your business’
-              social media experiencing growth. We expect posts to be
-              experiencing interaction, leads from social media increasing and a
+              social media experiencing growth. We expect posts to be receiving
+              higher interaction, leads from social media increasing and a
               general upwards trend of growth.
               <br />
               <br />
@@ -318,61 +320,8 @@ const Home = () => {
           <img src="/assets/Pixelite-Small-Business-Package.png" />
         </section>
       </div>
-      <div id="website-prices" className="packages">
-        <div className="combined-heading reveal">
-          <h1>Choose the package that best suits you</h1>
-          <p>
-            The following packages will give you an idea of the social media
-            options we offer. If none of the packages below suit your needs,
-            don't hesitate to reach out and we'll be more than happy to help!
-          </p>
-        </div>
-        <div className="prices">
-          <PriceCard
-            service="web-design"
-            package="Basic"
-            catchPhrase="Suitable for Startups and businesses with basic needs"
-            price="300"
-            benefits={[
-              "4 Page Website",
-              "User & Mobile Friendly",
-              "Domain Name & Hosting",
-              "10 Images",
-              "Technical Support",
-            ]}
-            key="website-basic"
-          ></PriceCard>
-          <PriceCard
-            service="web-design"
-            package="Advanced"
-            catchPhrase="Suitable for Startups and businesses with basic needs"
-            price="625"
-            benefits={[
-              "7 Page Website",
-              "User & Mobile Friendly",
-              "Domain Name & Hosting",
-              "20 Images",
-              "Technical Support",
-              "Basic SEO",
-            ]}
-            key="website-advanced"
-          ></PriceCard>
-          <PriceCard
-            service="web-design"
-            package="Premium"
-            catchPhrase="Suitable for Startups and businesses with basic needs"
-            price="849"
-            benefits={[
-              "10 Page Website",
-              "User & Mobile Friendly",
-              "Domain Name & Hosting",
-              "30 Images",
-              "Technical Support",
-              "Basic SEO",
-            ]}
-            key="website-premium"
-          ></PriceCard>
-        </div>
+      <div id="social-media-quotes" className="packages">
+        <SocialMediaQuote />
         <ContactForm />
       </div>
     </div>
@@ -417,6 +366,301 @@ const Home = () => {
           </>
         }
       ></PixelitePage>
+    </div>
+  );
+};
+
+const platforms = [
+  {
+    name: "Instagram",
+    price: 25,
+    posts: 4,
+    stories: 3,
+    get description() {
+      return [
+        `Our team of specialists will post on your Instagram ${this.posts} times a week, and post a further ${this.stories} stories`,
+        `We'll monitor, promote and share your content both on Instagram and Facebook.`,
+        `Be rest assured that we'll research the best tags for your business, so you can reach the most people possible and see the highest
+        return on your investment.`,
+      ];
+    },
+    additions: [
+      "Setup"
+    ]
+  },
+  {
+    name: "TikTok",
+    price: 45,
+    posts: 3,
+    stories: 3,
+    get description() {
+      return [
+        `Our team of specialists will post on your Facebook ${this.posts} times a week, and post a further ${this.stories} stories`,
+        `We'll find relevant communities, share your content and increase your reach to potential customers`,
+        `We'll regularly monitor post performance, seeing what works best for your business. You will also receieve this information in the form of monthly reports.`,
+        `Furthermore, we'll encourage synergy between your social platforms by promoting your Instagram content (if you choose for us to also manage your Instagram account) on Facebook and vice versa.`,
+      ];
+    },
+    additions: [
+      "Setup"
+    ]
+  },
+  {
+    name: "Twitter",
+    price: 20,
+    posts: 4,
+    stories: 0,
+    get description() {
+      return [
+        `Our team of specialists will post on your Facebook ${this.posts} times a week, and post a further ${this.stories} stories`,
+        `We'll find relevant communities, share your content and increase your reach to potential customers`,
+        `We'll regularly monitor post performance, seeing what works best for your business. You will also receieve this information in the form of monthly reports.`,
+        `Furthermore, we'll encourage synergy between your social platforms by promoting your Instagram content (if you choose for us to also manage your Instagram account) on Facebook and vice versa.`,
+      ];
+    },
+    additions: [
+      "Setup"
+    ]
+  },
+  {
+    name: "YouTube",
+    price: 45,
+    posts: 4,
+    stories: 0,
+    get description() {
+      return [
+        `Our team of specialists will post on your Facebook ${this.posts} times a week, and post a further ${this.stories} stories`,
+        `We'll find relevant communities, share your content and increase your reach to potential customers`,
+        `We'll regularly monitor post performance, seeing what works best for your business. You will also receieve this information in the form of monthly reports.`,
+        `Furthermore, we'll encourage synergy between your social platforms by promoting your Instagram content (if you choose for us to also manage your Instagram account) on Facebook and vice versa.`,
+      ];
+    },
+    additions: [
+      "Setup"
+    ]
+  },
+];
+
+const additions = [
+  {
+    name: `Setup`,
+    description: "Haven't got an account setup already? No problem. We'll fully set up the account, including graphics, auto-responses, and business information.",
+    price: 15
+  }
+]
+
+const SocialMediaQuote = () => {
+  const [selectedSocials, setSelectedSocials] = useState([
+    {
+      name: "Facebook",
+      price: 45,
+      posts: 4,
+      stories: 3,
+      get description() {
+        return [
+          `Our team of specialists will post on your Facebook ${this.posts} times a week, and post a further ${this.stories} stories`,
+          `We'll find relevant communities, share your content and increase your reach to potential customers`,
+          `We'll regularly monitor post performance, seeing what works best for your business. You will also receieve this information in the form of monthly reports.`,
+          `Furthermore, we'll encourage synergy between your social platforms by promoting your Instagram content (if you choose for us to also manage your Instagram account) on Facebook and vice versa.`,
+        ];
+      },
+      additions: [
+        "Setup"
+      ]
+    },
+  ]);
+  const [cost, setCost] = useState(45);
+  const [totalWeeks, setTotalWeeks] = useState(1);
+  const [totalCost, setTotalCost] = useState(45);
+  const [addOns, setAddOns] = useState([]);
+  const [oneTimeFee, setOneTimeFee] = useState(0);
+
+
+  const handleClick = (platform) => {
+    if (!selectedSocials.includes(platform)) {
+      addSelectedSocial(platform);
+    } else {
+      removeSelectedSocial(platform);
+    }
+  };
+
+  const handleAddOn = (event, addOn, platform) => {
+    const checkBox = event.target;
+    if(checkBox.checked) {
+      addAddOn(checkBox, platform)
+    }else{
+      removeAddOn(checkBox, platform)
+    }
+  }
+
+  const addSelectedSocial = (social) => {
+    setSelectedSocials((selectedSocials) => {
+      return [...selectedSocials, social];
+    });
+  };
+
+  const addAddOn = (addOn, platform) => {
+    setAddOns((addOns) => {
+      return [...addOns, {addOn, platform}];
+    })
+
+  }
+
+  const removeSelectedSocial = (social) => {
+    setSelectedSocials((socials) => {
+      const result = [...socials];
+      result.splice(selectedSocials.indexOf(social), 1);
+      return result;
+    });
+  };
+
+  const removeAddOn = (addOn, platform) => {
+    setAddOns((addOn, platform) => {
+      const result = [...addOns];
+      result.splice(addOns.indexOf({addOn, platform}), 1);
+      return result;
+    });
+
+  }
+
+
+  const calculateCost = () => {
+    var total = 0;
+    console.log(selectedSocials);
+    selectedSocials.forEach((platform) => {
+      total += platform.price;
+      console.log(platform.name + " " + platform.price);
+    });
+    setCost(total);
+    setTotalCost(total * totalWeeks)
+
+    var totalOneOff = 0;
+
+    addOns.forEach(addOn => {
+      var addition = additions.find(add => {
+        return add.name === addOn.addOn.id
+      })
+      try{
+        totalOneOff += addition.price;
+      }catch(e){
+        console.log(e)
+        totalOneOff += 0;
+      }
+    });
+    setOneTimeFee(totalOneOff)
+  };
+
+  const calculateOneOffFees = () => {
+
+  }
+
+  const getAdditionLine = (addition, pack) => {
+    var addition = additions.find(add => {
+      
+      return add.name === addition
+    })
+    return(
+      <div>
+        <input type="checkbox" id={addition.name} onChange={(event ) => {handleAddOn(event, addition.name, pack)}}/>
+        <div>
+        <p>{addition.name}</p>
+        <p>{addition.description}</p>
+        </div>
+      </div>
+    )
+
+
+  }
+
+
+  useEffect(() => {
+    calculateCost();
+    console.log(addOns)
+  });
+
+  return (
+    <div id="social-media-quote">
+      <div class="combined-heading">
+        <h1>Custom Quote</h1>
+        <p>Discover the range of platforms and services we offer by getting your own custom quote</p>
+      </div>
+      <h2></h2>
+      <h2>Number of weeks</h2>
+      <div class="range_slider">
+      <div class="sliderValue">
+        <span>1</span>
+      </div>
+      <div class="field">
+        <div class="value left">1</div>
+        <input type="range" min="1" max="12" steps="1" defaultValue="1" onChange={(event) => setTotalWeeks(event.target.value)}/>
+        <div class="value right">12</div>
+      </div>
+    </div>
+      <h2>Platforms</h2>
+      <div id="platforms">
+        {platforms.map((platform) => {
+          if (platform.name !== "Facebook") {
+            return (
+              <div>
+                <input
+                  type="checkbox"
+                  id={platform.name}
+                  onClick={() => handleClick(platform)}
+                />
+                <p>{platform.name}</p>
+              </div>
+            );
+          }
+        })}
+      </div>
+      <div id="custom-quote">
+        <h2>Your Custom Quote</h2>
+        <div id="selected-socials">
+          {selectedSocials.map((social) => {
+            return (
+              <div>
+                <h2>{social.name}</h2>
+                <h5>£{social.price}/week</h5>
+                <ul>
+                  {social.description.map((feature) => {
+                    return <li>{feature}</li>;
+                  })}
+                </ul>
+                <h5>Add-ons</h5>
+                <ul class="social-additions">
+                  {social.additions.map((addition) => {
+                    return <li>{getAdditionLine(addition, social.name)}</li>
+                  })}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div id="price-info">
+        <div>
+          <h1>Weekly Fee</h1>
+          <h1>£{cost}</h1>
+        </div>
+        {totalWeeks > 1 ? (
+          <p>For the {totalWeeks} weeks selected, the total amount would be £{totalCost}. </p>
+        ): null}
+    
+        {oneTimeFee != 0 ? (
+          <p>A one-time fee of £{oneTimeFee} for your selected add-ons would also apply.</p>
+        ) : null }
+      
+      </div>
+      <div id="quote-footer">
+        <p>
+          *All quotes aren't final, and we're more than happy to make
+          adjustments according to your business and its needs. This quote
+          simply allows us to give you an idea of our options and pricing. With
+          that said, please contact us and we'll be able to make our packages
+          further work for you.
+        </p>
+        <button class="button">Get in touch</button>
+      </div>
     </div>
   );
 };

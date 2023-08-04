@@ -1243,12 +1243,280 @@ input:focus, textarea:focus {
 }
 
 
+#social-media-quote {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+#social-media-quote .range_slider input {
+  width: 90%;
+  max-width: 900px;
+}
+
+#data-list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+  
+}
+
+.range_slider{
+  height: 80px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0 65px 0 45px;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+.sliderValue{
+  position: relative;
+  width: 100%;
+}
+.sliderValue span{
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  transform: translateX(-70%) scale(0);
+  font-weight: 500;
+  top: -40px;
+  line-height: 55px;
+  z-index: 2;
+  color: #fff;
+  transform-origin: bottom;
+  transition: transform 0.3s ease-in-out;
+}
+.sliderValue span.show{
+  transform: translateX(-70%) scale(1);
+}
+.sliderValue span:after{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: var(--pixelite-blue);
+  border: 3px solid #fff;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border-bottom-left-radius: 50%;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.field{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+.field .value{
+  position: absolute;
+  font-size: 18px;
+  color: var(--pixelite-blue);
+  font-weight: 600;
+}
+.field .value.left{
+  left: -22px;
+}
+.field .value.right{
+  right: -43px;
+}
+.range_slider input{
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  z-index: 2222;
+}
+.range_slider input::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  background: var(--pixelite-blue);
+  border: 1px solid var(--pixelite-blue);
+  cursor: pointer;
+}
+.range_slider input::-moz-range-thumb{
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  background: var(--pixelite-blue);
+  border: 1px solid var(--pixelite-blue);
+  cursor: pointer;
+}
+.range_slider input::-moz-range-progress{
+  background: var(--pixelite-blue); 
+}
+
+.posts {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+#platforms {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+#platforms div {
+  padding: 1rem 2rem;
+}
+
+#custom-quote {
+  padding: 0rem 2rem
+}
+
+#custom-quote h2 {
+  color: var(--pixelite-blue);
+}
+
+#custom-quote {
+  border: #F1F1F1 solid;
+}
+
+#selected-socials ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 1rem;
+}
+
+
+
+#selected-socials > div {
+  padding: 1rem;
+  transition: all 2 ease;
+
+}
+
+
+
+
+#selected-socials li {
+  margin: 1rem 0;
+}
+
+#price-info {
+  background-color: #F1F1F1;
+  padding: 1rem 2rem;
+}
+
+#price-info div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#selected-socials {
+  transition: max-height 5s cubic-bezier(0, 1, 0, 1);
+}
+
+
+
+.social-additions div {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  align-items: center;
+  
+}
+
+.social-additions div div {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-additions ul {
+  list-style: none;
+}
+
+.social-additions p {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+
+
 
 
 
 
 
 @media (min-width: 768px) { 
+
+  .social-additions div {
+    display: flex;
+    flex-direction: row;
+  
+    
+  }
+
+
+
+
+  .social-additions input {
+    margin-right: 1.5rem;
+  }
+
+  #quote-footer {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+    text-align: left;
+    align-items: center;
+
+  }
+
+  #quote-footer p {
+    max-width: 400px;
+  }
+
+  #quote-footer button {
+    margin-left: 5rem;
+    height: 100px;
+  }
+
+  #price-info div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+  }
+  
+  #custom-quote {
+    text-align: left;
+  }
+
+
+
+
+  #selected-socials ul {
+    list-style: disc;
+  }
+
+  #selected-socials h5 {
+    font-size: 1rem;
+    margin-top: 0.25rem;
+  }
+
+  .social-additions {
+    list-style: none !important;
+    padding-left: 0; 
+  }
 
   #processes {
     display: flex;
