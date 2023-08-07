@@ -102,7 +102,9 @@ export default class Header extends React.Component {
                   </Link>
                 </div>
                 <div>
-                  <p>Social Media Management</p>
+                <Link href="/social-media">
+                    <p>Social Media Management</p>
+                  </Link>
                 </div>
               </div>
             </li>
@@ -117,7 +119,7 @@ export default class Header extends React.Component {
                   <Link href="/packages/small-business">
                     <p>Small Business Package</p>
                   </Link>
-                  <Link href="/packages/social-media">
+                  <Link href="/packages/social-media-package">
                     <p>Social Media Package</p>
                   </Link>
                 </div>
@@ -170,7 +172,7 @@ export default class Header extends React.Component {
                   </Link>
                 </div>
                 <div>
-                  <Link href="/packages/social-media">
+                  <Link href="/packages/social-media-package">
                     <p>Social Media Package</p>
                   </Link>
                 </div>
@@ -188,8 +190,7 @@ export default class Header extends React.Component {
           <h1 className="pixelite-header tablet-show">
             {this.state.desktopHeader}
           </h1>
-          <br />
-          <br className="mobile-break" />
+
           <h6 className="pixelite-subheader mobile-show">
             {this.state.mobileSubheader}
           </h6>
@@ -200,6 +201,7 @@ export default class Header extends React.Component {
             <button className="button">Get a Quote</button>
           </div>
         </div>
+        <div id="statistics">
         <div id="statistics-container">
           <div className="stats-smallscreen">
             <h2 className="pixelite-header countup">237</h2>
@@ -217,6 +219,7 @@ export default class Header extends React.Component {
             <h2 className="pixelite-header countup">331</h2>
             <h3 className="countup-header countup">Digital Products Sold</h3>
           </div>
+        </div>
         </div>
       </div>
     );

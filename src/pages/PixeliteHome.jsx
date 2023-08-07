@@ -52,7 +52,7 @@ const Home = () => {
 
         <div id="why-list">
           <div>
-            <img src="assets/icons/social-circle.svg" />
+            <img src="assets/icons/social-circle.svg" alt="Pixelite Digital helps you reach more customers, boosting your sales"/>
             <h2>
               Grow Your <span className="pixelite-blue">Reach</span>
             </h2>
@@ -62,7 +62,7 @@ const Home = () => {
             </p>
           </div>
           <div>
-            <img src="assets/icons/revenue-increase.svg" />
+            <img src="assets/icons/revenue-increase.svg" alt="Pixelite Digital can help increase your revenue through web design and digital marketing"/>
             <h2>
               Grow Your <span className="pixelite-blue">Revenue</span>
             </h2>
@@ -72,7 +72,7 @@ const Home = () => {
             </p>
           </div>
           <div>
-            <img src="assets/icons/business-growth.svg" />
+            <img src="assets/icons/business-growth.svg" alt="Businesses who use Pixelite Digital experience growth in their sales, and business as a whole" />
             <h2>
               Grow Your <span className="pixelite-blue">Business</span>
             </h2>
@@ -186,6 +186,7 @@ const Home = () => {
               us design and build your website and web applications that will
               solidify your business’ digital presence.
             </p>
+            
             <a href="/social-media">
               <button className="button">Learn More</button>
             </a>
@@ -230,7 +231,7 @@ const Home = () => {
               can handle your social media so you can focus more on your
               business.
             </p>
-            <Link href="/packages/social-media">
+            <Link href="/packages/social-media-package">
               <button class="button">Find out more</button>
             </Link>
           </div>
@@ -263,32 +264,32 @@ const Home = () => {
       <div id="work">
         <div id="image-scroller">
           <ul className="scroller-slide">
-            <img src="assets/clients/Vorex_Services.png"></img>
-            <img src="assets/clients/8WB.png"></img>
-            <img src="assets/clients/iFry.png"></img>
-            <img src="assets/clients/Notion_Commotion.png"></img>
-            <img src="assets/clients/PvPWars.png"></img>
+            <img src="assets/clients/Vorex_Services.png" alt="Vorex Services, a business Pixelite Digital has helped in the provision of graphic design"></img>
+            <img src="assets/clients/8WB.png" alt="8WB By Ali, a business Pixelite Digital has helped in the provision of web design and SEO"></img>
+            <img src="assets/clients/iFry.png" alt="Vorex Services, a business Pixelite Digital has helped in the provision of graphic design and social media"></img>
+            <img src="assets/clients/Notion_Commotion.png" alt="Vorex Services, a business Pixelite Digital has helped in the provision of SEO and social media"></img>
+            <img src="assets/clients/PvPWars.png" alt="Vorex Services, a business Pixelite Digital has helped in the provision of graphic design"></img>
           </ul>
           <ul className="scroller-slide">
-            <img src="assets/clients/Vorex_Services.png"></img>
-            <img src="assets/clients/8WB.png"></img>
-            <img src="assets/clients/iFry.png"></img>
-            <img src="assets/clients/Notion_Commotion.png"></img>
-            <img src="assets/clients/PvPWars.png"></img>
+          <img src="assets/clients/Vorex_Services.png" alt="Vorex Services, a business Pixelite Digital has helped in the provision of graphic design"></img>
+            <img src="assets/clients/8WB.png" alt="8WB By Ali, a business Pixelite Digital has helped in the provision of web design and SEO"></img>
+            <img src="assets/clients/iFry.png" alt="Vorex Services, a business Pixelite Digital has helped in the provision of graphic design and social media"></img>
+            <img src="assets/clients/Notion_Commotion.png" alt="Vorex Services, a business Pixelite Digital has helped in the provision of SEO and social media"></img>
+            <img src="assets/clients/PvPWars.png" alt="Vorex Services, a business Pixelite Digital has helped in the provision of graphic design"></img>
           </ul>
           <ul className="scroller-slide">
-            <img src="assets/clients/Vorex_Services.png"></img>
-            <img src="assets/clients/8WB.png"></img>
-            <img src="assets/clients/iFry.png"></img>
-            <img src="assets/clients/Notion_Commotion.png"></img>
-            <img src="assets/clients/PvPWars.png"></img>
+          <img src="assets/clients/Vorex_Services.png" alt="Vorex Services, a business Pixelite Digital has helped in the provision of graphic design"></img>
+            <img src="assets/clients/8WB.png" alt="8WB By Ali, a business Pixelite Digital has helped in the provision of web design and SEO"></img>
+            <img src="assets/clients/iFry.png" alt="Vorex Services, a business Pixelite Digital has helped in the provision of graphic design and social media"></img>
+            <img src="assets/clients/Notion_Commotion.png" alt="Vorex Services, a business Pixelite Digital has helped in the provision of SEO and social media"></img>
+            <img src="assets/clients/PvPWars.png" alt="Vorex Services, a business Pixelite Digital has helped in the provision of graphic design"></img>
           </ul>
           <ul className="scroller-slide">
-            <img src="assets/clients/Vorex_Services.png"></img>
-            <img src="assets/clients/8WB.png"></img>
-            <img src="assets/clients/iFry.png"></img>
-            <img src="assets/clients/Notion_Commotion.png"></img>
-            <img src="assets/clients/PvPWars.png"></img>
+          <img src="assets/clients/Vorex_Services.png" alt="Vorex Services, a business Pixelite Digital has helped in the provision of graphic design"></img>
+            <img src="assets/clients/8WB.png" alt="8WB By Ali, a business Pixelite Digital has helped in the provision of web design and SEO"></img>
+            <img src="assets/clients/iFry.png" alt="Vorex Services, a business Pixelite Digital has helped in the provision of graphic design and social media"></img>
+            <img src="assets/clients/Notion_Commotion.png" alt="Vorex Services, a business Pixelite Digital has helped in the provision of SEO and social media"></img>
+            <img src="assets/clients/PvPWars.png" alt="Vorex Services, a business Pixelite Digital has helped in the provision of graphic design"></img>
           </ul>
         </div>
         <Link href="/our-work">
@@ -296,7 +297,7 @@ const Home = () => {
         </Link>
       </div>
       <section className="pixelite-section right reveal">
-        <img src="assets/RightHands-Graphic.png" className="desktop-show"></img>
+        <img src="assets/RightHands-Graphic.png" className="desktop-show" alt="You're in safe hands with Pixelite."></img>
         <div>
           <h1>You're in safe hands.</h1>
           <p>

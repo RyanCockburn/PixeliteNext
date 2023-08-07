@@ -6,7 +6,7 @@ export default class Footer extends React.Component {
     return (
       <div id="footer">
         <div id="footer-container">
-          <img src="/assets/PixeliteDigitalLogo.png"></img>
+          <img src="/assets/PixeliteDigitalLogo.png" alt="Pixelite Digital transparent logo on dark background"></img>
           <div id="footer-sections">
             <div>
               <h3>What we do</h3>
@@ -45,25 +45,25 @@ export default class Footer extends React.Component {
                   href="https://www.facebook.com/pixelite.digital/"
                   target="_blank"
                 >
-                  <img src="/assets/icons/facebook.png" />
+                  <img src="/assets/icons/facebook.png" href="Pixelite Digital Facebook"/>
                 </Link>
                 <Link
                   href="https://www.facebook.com/pixelite.digital/"
                   target="_blank"
                 >
-                  <img src="/assets/icons/twitter.png" />
+                  <img src="/assets/icons/twitter.png" href="Pixelite Digital Twitter"/>
                 </Link>
                 <Link
                   href="https://www.instagram.com/pixelite.digital/"
                   target="_blank"
                 >
-                  <img src="/assets/icons/instagram.png" />
+                  <img src="/assets/icons/instagram.png" href="Pixelite Digital Instagram" />
                 </Link>
                 <Link
                   href="https://www.facebook.com/pixelite.digital/"
                   target="_blank"
                 >
-                  <img src="/assets/icons/linkedin.png" />
+                  <img src="/assets/icons/linkedin.png" href="Pixelite Digital Linkedin" />
                 </Link>
               </div>
             </div>

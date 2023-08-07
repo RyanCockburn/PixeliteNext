@@ -9,6 +9,7 @@ import {
   CursorArrowRaysIcon,
   GlobeAltIcon,
   HeartIcon,
+  XMarkIcon,
 } from "@heroicons/react/24/outline";
 import Lottie from "lottie-react";
 import Link from "next/link";
@@ -24,7 +25,6 @@ function nextProceess(clicked) {
   var target = clicked.target;
   var processes = target.closest("#processes");
   var processList = processes.querySelectorAll("div:not(.vl)");
-  console.log(processList);
   var currentActive = processList[currentProcess];
   var nextNode =
     currentProcess + 1 >= processList.length ? 0 : currentProcess + 1;
@@ -214,6 +214,7 @@ const Home = () => {
               <li>Instagram</li>
               <li>Twitter</li>
               <li>TikTok</li>
+              <li>YouTube</li>
             </ul>
             <br />
             Whether your business already has a social media presence, or are
@@ -240,7 +241,7 @@ const Home = () => {
               familiar with what your business offers and its requirements
             </p>
           </div>
-          <div class="vl fill"></div>
+
           <div>
             <img src="/assets/icons/strategy.png" />
             <h3>Strategy</h3>
@@ -254,7 +255,7 @@ const Home = () => {
               daily, weekly and monthly breakdown of all posts.
             </p>
           </div>
-          <div class="vl fill"></div>
+ 
           <div>
             <img src="/assets/icons/deployment.png" />
             <h3>Deployment</h3>
@@ -264,7 +265,7 @@ const Home = () => {
               We’ll begin posting, promoting and growing your social media.
             </p>
           </div>
-          <div class="vl fill"></div>
+
           <div>
             <img src="/assets/icons/results.png" />
             <h3>Results</h3>
@@ -354,8 +355,7 @@ const Home = () => {
           <>
             60% of people use social media on a daily basis. Expand the reach of
             your business by using social media to advertise.
-            <br />
-            <br />
+
             Choose from a selection of our packages, starting at just £50.
           </>
         }
@@ -384,9 +384,7 @@ const platforms = [
         return on your investment.`,
       ];
     },
-    additions: [
-      "Setup"
-    ]
+    additions: ["Setup"],
   },
   {
     name: "TikTok",
@@ -401,9 +399,7 @@ const platforms = [
         `Furthermore, we'll encourage synergy between your social platforms by promoting your Instagram content (if you choose for us to also manage your Instagram account) on Facebook and vice versa.`,
       ];
     },
-    additions: [
-      "Setup"
-    ]
+    additions: ["Setup"],
   },
   {
     name: "Twitter",
@@ -418,9 +414,7 @@ const platforms = [
         `Furthermore, we'll encourage synergy between your social platforms by promoting your Instagram content (if you choose for us to also manage your Instagram account) on Facebook and vice versa.`,
       ];
     },
-    additions: [
-      "Setup"
-    ]
+    additions: ["Setup"],
   },
   {
     name: "YouTube",
@@ -435,19 +429,27 @@ const platforms = [
         `Furthermore, we'll encourage synergy between your social platforms by promoting your Instagram content (if you choose for us to also manage your Instagram account) on Facebook and vice versa.`,
       ];
     },
-    additions: [
-      "Setup"
-    ]
+    additions: ["Setup"],
   },
 ];
 
 const additions = [
   {
     name: `Setup`,
-    description: "Haven't got an account setup already? No problem. We'll fully set up the account, including graphics, auto-responses, and business information.",
-    price: 15
-  }
-]
+    description:
+      "Haven't got an account setup already? No problem. We'll fully set up the account, including graphics, auto-responses, and business information.",
+    price: 15,
+  },
+];
+
+function closePopout(target) {
+  console.log(target);
+  var popout = target
+    .closest("#quote-footer")
+    .querySelectorAll(".popout_wrapper")[0];
+  popout.style.display = "none";
+  document.body.style.overflowY = "visible";
+}
 
 const SocialMediaQuote = () => {
   const [selectedSocials, setSelectedSocials] = useState([
@@ -464,9 +466,7 @@ const SocialMediaQuote = () => {
           `Furthermore, we'll encourage synergy between your social platforms by promoting your Instagram content (if you choose for us to also manage your Instagram account) on Facebook and vice versa.`,
         ];
       },
-      additions: [
-        "Setup"
-      ]
+      additions: ["Setup"],
     },
   ]);
   const [cost, setCost] = useState(45);
@@ -474,7 +474,7 @@ const SocialMediaQuote = () => {
   const [totalCost, setTotalCost] = useState(45);
   const [addOns, setAddOns] = useState([]);
   const [oneTimeFee, setOneTimeFee] = useState(0);
-
+  const [formattedQuote, setFormattedQuote] = useState();
 
   const handleClick = (platform) => {
     if (!selectedSocials.includes(platform)) {
@@ -486,12 +486,12 @@ const SocialMediaQuote = () => {
 
   const handleAddOn = (event, addOn, platform) => {
     const checkBox = event.target;
-    if(checkBox.checked) {
-      addAddOn(checkBox, platform)
-    }else{
-      removeAddOn(checkBox, platform)
+    if (checkBox.checked) {
+      addAddOn(checkBox, platform);
+    } else {
+      removeAddOn(checkBox, platform);
     }
-  }
+  };
 
   const addSelectedSocial = (social) => {
     setSelectedSocials((selectedSocials) => {
@@ -501,10 +501,9 @@ const SocialMediaQuote = () => {
 
   const addAddOn = (addOn, platform) => {
     setAddOns((addOns) => {
-      return [...addOns, {addOn, platform}];
-    })
-
-  }
+      return [...addOns, { addOn, platform }];
+    });
+  };
 
   const removeSelectedSocial = (social) => {
     setSelectedSocials((socials) => {
@@ -517,86 +516,144 @@ const SocialMediaQuote = () => {
   const removeAddOn = (addOn, platform) => {
     setAddOns((addOn, platform) => {
       const result = [...addOns];
-      result.splice(addOns.indexOf({addOn, platform}), 1);
+      result.splice(addOns.indexOf({ addOn, platform }), 1);
       return result;
     });
-
-  }
-
+  };
 
   const calculateCost = () => {
     var total = 0;
-    console.log(selectedSocials);
     selectedSocials.forEach((platform) => {
       total += platform.price;
-      console.log(platform.name + " " + platform.price);
     });
     setCost(total);
-    setTotalCost(total * totalWeeks)
+    setTotalCost(total * totalWeeks);
 
     var totalOneOff = 0;
 
-    addOns.forEach(addOn => {
-      var addition = additions.find(add => {
-        return add.name === addOn.addOn.id
-      })
-      try{
+    addOns.forEach((addOn) => {
+      var addition = additions.find((add) => {
+        return add.name === addOn.addOn.id;
+      });
+      try {
         totalOneOff += addition.price;
-      }catch(e){
-        console.log(e)
+      } catch (e) {
         totalOneOff += 0;
       }
     });
-    setOneTimeFee(totalOneOff)
+    setOneTimeFee(totalOneOff);
   };
 
-  const calculateOneOffFees = () => {
-
+  function setBubble(range) {
+    setTotalWeeks(event.target.value);
+    // const bubble = range
+    //   .closest(".range_slider")
+    //   .querySelectorAll(".bubble")[0];
+    // console.log(bubble);
+    // const min = range.min ? range.min : 0;
+    // const max = range.max ? range.max : 100;
+    // const newVal = Number(((range.value - min) * 100) / (max - min));
+    // bubble.innerHTML = event.target.value;
+    // bubble.style.left = `calc(${newVal}% + (${4 - newVal * 0.075}px))`;
   }
 
   const getAdditionLine = (addition, pack) => {
-    var addition = additions.find(add => {
-      
-      return add.name === addition
-    })
-    return(
+    var addition = additions.find((add) => {
+      return add.name === addition;
+    });
+    return (
       <div>
-        <input type="checkbox" id={addition.name} onChange={(event ) => {handleAddOn(event, addition.name, pack)}}/>
+        <input
+          type="checkbox"
+          id={addition.name}
+          onChange={(event) => {
+            handleAddOn(event, addition.name, pack);
+          }}
+        />
         <div>
-        <p>{addition.name}</p>
-        <p>{addition.description}</p>
+          <p>{addition.name}</p>
+          <p>{addition.description}</p>
         </div>
       </div>
-    )
+    );
+  };
 
-
+  function openPopout(target) {
+    var popout = target
+      .closest("#quote-footer")
+      .querySelectorAll(".popout_wrapper")[0];
+    popout.style.display = "inline";
+    document.body.style.overflowY = "hidden";
   }
+
 
 
   useEffect(() => {
     calculateCost();
-    console.log(addOns)
+    formatQuote();
   });
+
+  const formatQuote = () => {
+    var services = "";
+    selectedSocials.forEach(
+      (social) => (services = services + social.name + "<br>")
+    );
+    var formattedAddOns = "";
+    addOns.forEach(
+      (addOn) =>
+        (formattedAddOns =
+          formattedAddOns + (addOn.platform + "," + addOn.addOn.id + "<br>"))
+    );
+
+    var returnStatement =
+      "<br>This client has selected the following platforms:<br>" +
+      services +
+      "<br><br>" +
+      "The following additional add-ons have also been selected.<br>" +
+      formattedAddOns +
+      "<br>" +
+      "Total weekly cost £" +
+      cost +
+      "<br>" +
+      "Total number of weeks: " +
+      totalWeeks +
+      " weeks";
+
+    setFormattedQuote(returnStatement);
+  };
 
   return (
     <div id="social-media-quote">
       <div class="combined-heading">
         <h1>Custom Quote</h1>
-        <p>Discover the range of platforms and services we offer by getting your own custom quote</p>
+        <p>
+          Discover the range of platforms and services we offer by getting your
+          own custom quote
+        </p>
       </div>
       <h2></h2>
       <h2>Number of weeks</h2>
+      <p>Select the number of weeks you'd like to commission our services for.</p>
+      <p>You have currently selected {totalWeeks} weeks</p>
       <div class="range_slider">
-      <div class="sliderValue">
-        <span>1</span>
+        <div class="sliderValue">
+          <span>1</span>
+        </div>
+        <div class="field">
+          <div class="value left">1</div>
+          <input
+            type="range"
+            min="1"
+            max="12"
+            steps="1"
+            defaultValue="1"
+            onChange={(event) => setBubble(event.target)}
+          />
+          <div class="value right">12</div>
+        </div>
       </div>
-      <div class="field">
-        <div class="value left">1</div>
-        <input type="range" min="1" max="12" steps="1" defaultValue="1" onChange={(event) => setTotalWeeks(event.target.value)}/>
-        <div class="value right">12</div>
-      </div>
-    </div>
       <h2>Platforms</h2>
+      <p>Select the platforms you'd like us to handle for you.</p>
       <div id="platforms">
         {platforms.map((platform) => {
           if (platform.name !== "Facebook") {
@@ -629,7 +686,7 @@ const SocialMediaQuote = () => {
                 <h5>Add-ons</h5>
                 <ul class="social-additions">
                   {social.additions.map((addition) => {
-                    return <li>{getAdditionLine(addition, social.name)}</li>
+                    return <li>{getAdditionLine(addition, social.name)}</li>;
                   })}
                 </ul>
               </div>
@@ -637,19 +694,19 @@ const SocialMediaQuote = () => {
           })}
         </div>
       </div>
+
       <div id="price-info">
         <div>
           <h1>Weekly Fee</h1>
           <h1>£{cost}</h1>
         </div>
-        {totalWeeks > 1 ? (
-          <p>For the {totalWeeks} weeks selected, the total amount would be £{totalCost}. </p>
-        ): null}
-    
+
         {oneTimeFee != 0 ? (
-          <p>A one-time fee of £{oneTimeFee} for your selected add-ons would also apply.</p>
-        ) : null }
-      
+          <p>
+            A one-time fee of £{oneTimeFee} for your selected add-ons would also
+            apply.
+          </p>
+        ) : null}
       </div>
       <div id="quote-footer">
         <p>
@@ -659,10 +716,140 @@ const SocialMediaQuote = () => {
           that said, please contact us and we'll be able to make our packages
           further work for you.
         </p>
-        <button class="button">Get in touch</button>
+        <button class="button" onClick={(event) => openPopout(event.target)}>
+          Get in touch
+        </button>
+        <div class="popout_wrapper">
+          <div class="popout">
+            <button
+              class="popout-exit"
+              onClick={(event) => closePopout(event.target)}
+              type="button"
+              aria-label="Close"
+            >
+              <XMarkIcon className="h-24 w-24" />
+            </button>
+            <Quote quote={formattedQuote} />
+          </div>
+        </div>
       </div>
     </div>
   );
 };
+
+function Quote(props) {
+  return (
+    <div id="contact-us" class="social-quote">
+      <h1>
+        <span class="pixelite-blue">We're almost there</span>
+      </h1>
+      <p>We just need your contact information so we can get back to you.</p>
+      <form
+        onSubmit={(event) => handleSubmit(event, props.quote)}
+        className="form"
+      >
+        <div>
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            autoComplete="off"
+            id="name"
+            minLength={3}
+            maxLength={100}
+          ></input>
+        </div>
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            autoComplete="off"
+            id="email"
+            minLength={5}
+            maxLength={70}
+          ></input>
+        </div>
+
+        <button className="button" type="submit">
+          Send us your quote
+        </button>
+        <p className="error"></p>
+      </form>
+    </div>
+  );
+}
+
+async function handleSubmit(event, quote) {
+  event.preventDefault();
+
+  var data = {
+    name: String(event.target.name.value),
+    email: String(event.target.email.value),
+  };
+
+  data.message = JSON.stringify(quote);
+
+  var nullFields = [];
+
+  if (data.name === "") {
+    nullFields.push("name");
+  }
+
+  if (data.email === "") {
+    nullFields.push("email");
+  }
+
+  if (data.message === "") {
+    nullFields.push("name");
+  }
+
+  if (nullFields.length > 0) {
+    setErrorMessage("Please ensure all fields are filled out.");
+    return;
+  }
+
+  if (!validateEmail(data.email)) {
+    setErrorMessage("Please enter a valid email address.");
+    return;
+  }
+
+  const response = await fetch("/api/quote", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  if (response.ok) {
+    console.log("Message sent successfully");
+    reset();
+    
+    closePopout(document.body.querySelectorAll(".popout-exit")[0])
+  } else {
+    //Clear out form
+    console.log("Error sending message");
+  }
+
+  function validateEmail(mail) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+      return true;
+    }
+    alert("You have entered an invalid email address!");
+    return false;
+  }
+
+  function reset() {
+    var contactUs = document.getElementById("contact-us");
+    var form = contactUs.getElementsByClassName("form")[0];
+    form.reset();
+    contactUs.getElementsByClassName("error")[0].innerHTML =
+      "Your message has been sent successfully.";
+  }
+
+  function setErrorMessage(contents) {
+    var contactUs = document.getElementById("contact-us");
+    contactUs.getElementsByClassName("error")[0].innerHTML = contents;
+  }
+}
 
 export default Home;
