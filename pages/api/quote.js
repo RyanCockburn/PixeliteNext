@@ -1,4 +1,7 @@
+
+
 import nodemailer from "nodemailer";
+
 
 export default async function ContactAPI (req, res) {
 
@@ -50,6 +53,19 @@ export default async function ContactAPI (req, res) {
             <p>Email: ${email}</p>
             <p>Message: ${message}</p>
             `
+        })
+
+        const confirmMail = await transporter.sendMail({
+            from: user,
+            to: email,
+            replyTo: email,
+            subject: `Social media quote submission`,
+            html:
+            <Html>
+                <Text>
+                    test
+                </Text>
+            </Html>
         })
 
          return res.status(200).json({message: "success"})

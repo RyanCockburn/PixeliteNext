@@ -13,6 +13,7 @@ import SEO_Optimisation from "/public/assets/SEO_Optimisation.json";
 import SocialMedia from "/public/assets/SocialMedia.json";
 
 import {
+  CurrencyPoundIcon,
   GlobeAltIcon,
   MagnifyingGlassIcon,
   MapIcon,
@@ -37,30 +38,7 @@ function optionExpand(expandable) {
 const About = () => {
   const content = (
     <div>
-      <section className="pixelite-section leftreveal">
-        <div>
-          <h1>
-            <span class="pixelite-blue">Social media is hard.</span>
-          </h1>
-          <p>
-            But we can make it easier- for you, and your business.
-            <br/>
-            <br/>
-            The great impacts of social media, done right, on business performance is significant. Many of
-            our clients ask 'is it worth the money?', 'will I make a return on my investment?'. The answer, in most cases, is <span class="pixelite-blue">absolutely</span>.
-            <br/>
-            <br/>
-            We make it our goal to provide social media services that are affordable for every business. That's why we've put together this affordable
-            package that any business, big or small, can use to level up their social media presence.
-            <br/>
-            <br/>
-            Let's help your business flourish, together, using social media.
-          </p>
-
-        </div>
-        <Lottie className="lottie left" animationData={SocialMedia} />
-      </section>
-      <div class="combined-heading">
+            <div class="combined-heading">
         <h1>What's included?</h1>
         <p>
           Everything your small business could ever need to start online is
@@ -72,28 +50,20 @@ const About = () => {
         <section className="pixelite-section right reveal">
           <Lottie
             className="lottie right desktop-show"
-            animationData={BespokeWebsite}
+            animationData={SocialMedia}
           />
           <div>
-            <h1>Bespoke, premium website</h1>
+            <h1>Social Media Setup</h1>
 
             <p>
-              This package includes a custom Wix website, tailored to your
-              business and its needs. Even better, this website is fully
-              customisable and you can change it yourself in the future.
+              We'll help you setup your social media. From profile pictures to business information, we 
+              cover everything so you can be sure your socials are top notch.
               <br />
               <br />
-              Easily display your products/services, past work and anything else
-              you could possibly imagine.
+              This is a great, essential first step for any business wanting to succeed on social media.
               <p class="hidden active">
-                This website is an amazing starting point for a business just
-                starting to expand into the online space. It's often the case
-                that consumers expect a website, and this will help you live up
-                that expectation.
-                <br />
-                <br />
-                The best thing? You, the client, require little technical
-                knowledge to setup the website as we do it for you.
+                This option is limited to 2 social platforms, and a £5 fee will be applied for every additonal social media
+                platform you'd like setting up.
               </p>
             </p>
             <div class="learn-more" onClick={optionExpand}>
@@ -102,23 +72,17 @@ const About = () => {
           </div>
           <Lottie
             className="lottie right stats-smallscreen"
-            animationData={BespokeWebsite}
+            animationData={SocialMedia}
           />
         </section>
         <section className="pixelite-section left reveal">
           <div>
-            <h1>Promotional Graphics</h1>
+            <h1>Advertisement Post</h1>
             <p>
-              Wanting to promote your business? Or just want graphics to use on
-              your social media? This package has your business covered.
-              <br />
-              <br />
-              Our team of professional designers will design{" "}
-              <span class="pixelite-blue">2 Personalised Graphics</span> for
-              your business with this package. These graphics are guaranteed to
-              catch the attention of potential customers. Even better, you can
-              choose the content of each graphic so you can target your
-              promotion to specific products.
+              One of the major problems our clients often face is lacking an eye-catching advertisement for their business. This is a fundamental
+              component of any business wanting to attract customers online.
+              <br/><br/>
+              Our team of specalists will write you an effective, bespoke advertisement post that'll catch the attention of potential customers.
               <p class="hidden active">
                 If you don't require any graphics, we're more than happy to
                 discuss something of equivalent value we might be able to
@@ -138,15 +102,13 @@ const About = () => {
             animationData={SEO_Optimisation}
           />
           <div>
-            <h1>SEO Optimisation</h1>
+            <h1>2 Bespoke Graphics</h1>
             <p>
-              Appearing high in search results is essential for the success of
-              any business. That's why our team of specialist web developers
-              will optimise the searchability of your website and boost reach so
-              you can be sure you're reaching the most customers online.
+              Businesess often fear the price of custom, bespoke graphics. They fear they're too expensive, and won't see a ROI.
+              <br/><br/>
+              We want to help break this stigma. We'll provide you with 2 graphics your business can use to get its name out there. 
               <p class="hidden active">
-                By ranking higher, customers are more likely to find you first.
-                And so, they'll be more likely to choose you.
+                We'll discuss the needs of your business, and create 2 graphics to suit these needs.
               </p>
             </p>
             <div class="learn-more" onClick={optionExpand}>
@@ -160,27 +122,41 @@ const About = () => {
         </section>
         <section className="pixelite-section left reveal">
           <div>
-            <h1>FREE Domain</h1>
+            <h1>Comprehensive Consultation</h1>
             <p>
-              To sweeten the deal, we include a free 1 year domain in this
-              package. We'll purchase it for you, set it up and transfer it- no
-              hassle.
+              Starting out is intimidating. That's why we'll write you a business-specific, comprehensive document of ideas and strategies your business can use to fully utilise social media.
+              <br/><br/>
+              Even better, we offer the opportunity to discuss this document on a phone call, so we're both confident that we're on the same page.
+
+            </p>
+
+          </div>
+          <img className="right" src="/assets/icons/Consultation.svg" />
+        </section>
+        <section className="pixelite-section right reveal">
+          <Lottie
+            className="lottie right desktop-show"
+            animationData={SEO_Optimisation}
+          />
+          <div>
+            <h1>20% Discount on our Social Media Services</h1>
+            <p>
+              To sweeten the deal, we'll offer you a 20% discount on any of our social media management services. We'll post, advertise and share your business through social media-
+              so you can fully focus on your business.
+              <br/><br/>
+              For more information, see our social media management options here.
+              <br/><br/>
+              <button className="button"><a href="/social-media#social-media-quotes">See our social media options</a></button>
               <p class="hidden active">
-                After the 1 year period, you'll be responsible for renewing the
-                domain from the domain name provider. This usually costs ~£10
-                for a year, although prices may vary.
-                <br />
-                <br />
-                *Please note that, this feature excludes premium domains and
-                only includes domains that are unique, and exclusive to your
-                business.
+                We'll discuss the needs of your business, and create 2 graphics to suit these needs.
               </p>
             </p>
-            <div class="learn-more" onClick={optionExpand}>
-              <p>Learn more about this feature →</p>
-            </div>
+
           </div>
-          <Lottie className="lottie right" animationData={DomainGraphic} />
+          <Lottie
+            className="lottie right stats-smallscreen"
+            animationData={SEO_Optimisation}
+          />
         </section>
         {/* <section className="pixelite-section left reveal">
           <div>
@@ -203,94 +179,48 @@ const About = () => {
           <img src="https://pixelite.digital/assets/picture-template.png"></img>
         </section> */}
       </div>
-      <div id="website-testimonials">
-        <h1 className="combined-heading">
-          <h1>Some of our previous clients</h1>
-        </h1>
-        <Link target="_blank" href="https://www.the8wbclub.com">
-          <div class="website-testimonial">
-            <h1>The 8WB Club</h1>
-            <div class="testimonial-link">
-              <GlobeAltIcon className="h-24 w-24" />
-              <p>www.the8wbclub.com</p>
-            </div>
-            <img src="/assets/websites/8WB.png" />
-            <div class="testimonial-review">
-              <p>
-                Fantastic service from start to finish. Normally with business
-                nowadays it can take a coupe of days to even get a reply. These
-                guys are active & attentive. Mega quick replies! Got my my
-                approval & look forward to working together in the future again.
-                Thank you!
-              </p>
-              <h5>Ali Cunningham, Founder of 8WB</h5>
-            </div>
-          </div>
-        </Link>
-      </div>
+
+
+      
+     
       <div class="combined-heading">
         <h1>Why does my business need this? </h1>
         <p></p>
       </div>
       <div id="why-list">
-        <div>
-          <PresentationChartLineIcon className="h-24 w-24" />
-          <h2>
-            <span className="pixelite-blue">Growth</span>
-          </h2>
-          <p>
-            Year on year, the amount of people finding and interacting with
-            businesses online is increasing. At least 1/3 people purchase
-            online, making it essential that your business has the potential to
-            reach this growing audience.
-          </p>
-        </div>
+
 
         <div>
-          <MagnifyingGlassIcon className="h-24 w-24" />
+          <RocketLaunchIcon className="h-24 w-24" />
           <h2>
-            <span className="pixelite-blue">Discovery</span>
+            <span className="pixelite-blue">Initial Boost</span>
           </h2>
           <p>
-            You've got the product/service, now it needs to be discovered. We
-            can help. With our advanced SEO, we can increase how high you appear
-            in search results, and ensure your business is seen first.
+            We've all been there- social media can initially seem daunting, not knowing where to even start.
+            We help remove that fear, and give you everything you need to start.
           </p>
         </div>
         <div>
-          <PresentationChartBarIcon className="h-24 w-24" />
+          <CurrencyPoundIcon className="h-24 w-24" />
           <h2>
-            <span className="pixelite-blue">Increase Revenue</span>
+            <span className="pixelite-blue">Save Money</span>
           </h2>
           <p>
-            It's no secret that online channels help your business financially.
-            With more custom, comes more revenue. Don't let your business lose
-            out on revenue by not having a digital presence.
+            This package offers a cost-effective solution for starting social media. When purchasing the contents of this package separately, you could spend hundreds of pounds. 
+            <br/><br/>We help your business save money, with the prospect of making more money.
           </p>
         </div>
         <div>
-          <UserIcon className="h-24 w-24" />
-          <h2>
-            <span className="pixelite-blue">Competition</span>
-          </h2>
-          <p>
-            The difference between a customer choosing your competition over
-            your business could be as simple as finding them first. We can help
-            reverse that, and help your business be the one chosen by consumers.
-          </p>
-        </div>
-        <div>
-          <MapIcon className="h-24 w-24" />
+        <MapIcon className="h-24 w-24" />
           <h2>
             <span className="pixelite-blue">Expert Guidance</span>
           </h2>
           <p>
-            Our support doesn't just stop at this package. From purchase and
-            beyond, Pixelite will help in anyway we can to ensure your business
-            has the online advice and help it needs. You can be confident that
-            you're getting the best advice out there.
+            During your consultation, you'll receive strategies that will help elevate your social media presence. These strategies will give you direction, and increase the 
+            likelihood of your social media succeeding.
           </p>
         </div>
+        
       </div>
       <ContactForm />
     </div>

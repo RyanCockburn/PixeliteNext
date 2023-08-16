@@ -343,12 +343,14 @@ const Home = () => {
         page={content}
         desktopHeader={
           <>
-            <span className="pixelite-white">Social Media</span>
+            <span class="pixelite-white">We help your business do</span>
+            <br />
+            Social Media the right way.
           </>
         }
         mobileHeader={
           <>
-            <span className="pixelite-white">Social Media</span>
+            <span className="pixelite-white">Social Media. <br/> Done right.</span>
           </>
         }
         desktopSubheader={

@@ -32,7 +32,8 @@ function animateValue(id, start, end, duration) {
   var range = end - start;
   var current = start;
   var increment = end > start ? 1 : -1;
-  var stepTime = Math.abs(Math.floor(duration / range));
+  var stepTime = Math.floor(duration / range);
+  console.log(stepTime)
   var timer = setInterval(function () {
     current += increment;
     id.textContent = current;

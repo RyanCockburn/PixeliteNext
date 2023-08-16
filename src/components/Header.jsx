@@ -198,7 +198,7 @@ export default class Header extends React.Component {
             {this.state.desktopSubheader}
           </h6>
           <div id="hero-buttons">
-            <button className="button">Get a Quote</button>
+            <button className="button"><a href="/contact">Get in touch</a></button>
           </div>
         </div>
         <div id="statistics">

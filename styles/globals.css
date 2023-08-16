@@ -157,9 +157,7 @@ p {
   display: none;
 }
 
-.hidden {
-  display: ;
-}
+
 
 .button {
   top:50%;
@@ -175,6 +173,11 @@ p {
   transition: color 0.5s;
   transition: background-color 0.5s;
   font-size: 1.2rem;
+}
+
+.button a {
+  color: white;
+  
 }
 
 button { 
@@ -1876,6 +1879,7 @@ input:focus, textarea:focus {
     left: auto;
     margin-left: 0;
     top: 5.5rem;
+
     background-color: white;
     padding: 0.5rem 0;
     filter: drop-shadow(0 0 0.4rem black);
@@ -1923,7 +1927,7 @@ input:focus, textarea:focus {
     display: none;
   }
   .desktop-show {
-      display: block;
+      display: inline;
   } 
 
   .pixelite-header {
@@ -1975,6 +1979,7 @@ input:focus, textarea:focus {
       padding-left: 5%;
   }
 
+
   nav > div:last-child{
       margin-right: 10%;
   }
@@ -1983,8 +1988,10 @@ input:focus, textarea:focus {
       color: white;
   }
 
-  nav div {
+  nav > div {
     display: flex;
+
+    
 
   }
 
