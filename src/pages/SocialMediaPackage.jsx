@@ -38,7 +38,7 @@ function optionExpand(expandable) {
 const About = () => {
   const content = (
     <div>
-            <div class="combined-heading">
+      <div class="combined-heading">
         <h1>What's included?</h1>
         <p>
           Everything your small business could ever need to start online is
@@ -56,14 +56,17 @@ const About = () => {
             <h1>Social Media Setup</h1>
 
             <p>
-              We'll help you setup your social media. From profile pictures to business information, we 
-              cover everything so you can be sure your socials are top notch.
+              We'll help you setup your social media. From profile pictures to
+              business information, we cover everything so you can be sure your
+              socials are top notch.
               <br />
               <br />
-              This is a great, essential first step for any business wanting to succeed on social media.
+              This is a great, essential first step for any business wanting to
+              succeed on social media.
               <p class="hidden active">
-                This option is limited to 2 social platforms, and a £5 fee will be applied for every additonal social media
-                platform you'd like setting up.
+                This option is limited to 2 social platforms, and a £5 fee will
+                be applied for every additonal social media platform you'd like
+                setting up.
               </p>
             </p>
             <div class="learn-more" onClick={optionExpand}>
@@ -79,10 +82,15 @@ const About = () => {
           <div>
             <h1>Advertisement Post</h1>
             <p>
-              One of the major problems our clients often face is lacking an eye-catching advertisement for their business. This is a fundamental
-              component of any business wanting to attract customers online.
-              <br/><br/>
-              Our team of specalists will write you an effective, bespoke advertisement post that'll catch the attention of potential customers.
+              One of the major problems our clients face is lacking an
+              eye-catching advertisement for their business. This is a
+              fundamental component of any business wanting to attract customers
+              online.
+              <br />
+              <br />
+              Our team of specalists will write you an effective, bespoke
+              advertisement post that'll catch the attention of potential
+              customers.
               <p class="hidden active">
                 If you don't require any graphics, we're more than happy to
                 discuss something of equivalent value we might be able to
@@ -97,66 +105,83 @@ const About = () => {
           <img src="/assets/Promotional-Graphic.png"></img>
         </section>
         <section className="pixelite-section right reveal">
-          <Lottie
-            className="lottie right desktop-show"
-            animationData={SEO_Optimisation}
+        <img
+            className="right desktop-show"
+            src="/assets/icons/graphics.svg"
           />
           <div>
             <h1>2 Bespoke Graphics</h1>
             <p>
-              Businesess often fear the price of custom, bespoke graphics. They fear they're too expensive, and won't see a ROI.
-              <br/><br/>
-              We want to help break this stigma. We'll provide you with 2 graphics your business can use to get its name out there. 
+              Businesess often fear the price of custom, bespoke graphics. They
+              fear they're too expensive, and won't see a ROI.
+              <br />
+              <br />
+              We want to help break this stigma. We'll provide you with 2
+              graphics your business can use to get its name out there.
               <p class="hidden active">
-                We'll discuss the needs of your business, and create 2 graphics to suit these needs.
+                We'll discuss the needs of your business, and create 2 graphics
+                to suit these needs.
               </p>
             </p>
             <div class="learn-more" onClick={optionExpand}>
               <p>Learn more about this feature →</p>
             </div>
           </div>
-          <Lottie
-            className="lottie right stats-smallscreen"
-            animationData={SEO_Optimisation}
+          <img
+            className="right stats-smallscreen"
+            src="/assets/icons/graphics.svg"
           />
         </section>
         <section className="pixelite-section left reveal">
           <div>
             <h1>Comprehensive Consultation</h1>
             <p>
-              Starting out is intimidating. That's why we'll write you a business-specific, comprehensive document of ideas and strategies your business can use to fully utilise social media.
-              <br/><br/>
-              Even better, we offer the opportunity to discuss this document on a phone call, so we're both confident that we're on the same page.
-
+              Starting out is intimidating. That's why we'll write you a
+              business-specific, comprehensive document of ideas and strategies
+              your business can use to fully utilise social media.
+              <br />
+              <br />
+              Even better, we offer the opportunity to discuss this document on
+              a phone call, so we're both confident that we're on the same page.
             </p>
-
           </div>
           <img className="right" src="/assets/icons/Consultation.svg" />
         </section>
         <section className="pixelite-section right reveal">
-          <Lottie
-            className="lottie right desktop-show"
-            animationData={SEO_Optimisation}
+          <img
+            className="right desktop-show"
+            src="/assets/icons/percent-off.svg"
           />
+
           <div>
             <h1>20% Discount on our Social Media Services</h1>
             <p>
-              To sweeten the deal, we'll offer you a 20% discount on any of our social media management services. We'll post, advertise and share your business through social media-
-              so you can fully focus on your business.
-              <br/><br/>
-              For more information, see our social media management options here.
-              <br/><br/>
-              <button className="button"><a href="/social-media#social-media-quotes">See our social media options</a></button>
+              To sweeten the deal, we'll offer you a 20% discount on any of our
+              social media management services. We'll post, advertise and share
+              your business through social media- so you can fully focus on your
+              business.
+              <br />
+              <br />
+              For more information, see our social media management options
+              here.
+              <br />
+              <br />
+              <button className="button">
+                <a href="/social-media#social-media-quotes">
+                  See our social media options
+                </a>
+              </button>
               <p class="hidden active">
-                We'll discuss the needs of your business, and create 2 graphics to suit these needs.
+                We'll discuss the needs of your business, and create 2 graphics
+                to suit these needs.
               </p>
             </p>
-
           </div>
-          <Lottie
-            className="lottie right stats-smallscreen"
-            animationData={SEO_Optimisation}
+          <img
+            className="right stats-smallscreen"
+            src="/assets/icons/percent-off.svg"
           />
+
         </section>
         {/* <section className="pixelite-section left reveal">
           <div>
@@ -180,24 +205,20 @@ const About = () => {
         </section> */}
       </div>
 
-
-      
-     
       <div class="combined-heading">
         <h1>Why does my business need this? </h1>
         <p></p>
       </div>
       <div id="why-list">
-
-
         <div>
           <RocketLaunchIcon className="h-24 w-24" />
           <h2>
             <span className="pixelite-blue">Initial Boost</span>
           </h2>
           <p>
-            We've all been there- social media can initially seem daunting, not knowing where to even start.
-            We help remove that fear, and give you everything you need to start.
+            We've all been there- social media can initially seem daunting, not
+            knowing where to even start. We help remove that fear, and give you
+            everything you need to start.
           </p>
         </div>
         <div>
@@ -206,21 +227,27 @@ const About = () => {
             <span className="pixelite-blue">Save Money</span>
           </h2>
           <p>
-            This package offers a cost-effective solution for starting social media. When purchasing the contents of this package separately, you could spend hundreds of pounds. 
-            <br/><br/>We help your business save money, with the prospect of making more money.
+            This package offers a cost-effective solution for starting social
+            media. When purchasing the contents of this package separately, you
+            could spend hundreds of pounds.
+            <br />
+            <br />
+            We help your business save money, with the prospect of making more
+            money.
           </p>
         </div>
         <div>
-        <MapIcon className="h-24 w-24" />
+          <MapIcon className="h-24 w-24" />
           <h2>
             <span className="pixelite-blue">Expert Guidance</span>
           </h2>
           <p>
-            During your consultation, you'll receive strategies that will help elevate your social media presence. These strategies will give you direction, and increase the 
-            likelihood of your social media succeeding.
+            During your consultation, you'll receive strategies that will help
+            elevate your social media presence. These strategies will give you
+            direction, and increase the likelihood of your social media
+            succeeding.
           </p>
         </div>
-        
       </div>
       <ContactForm />
     </div>

@@ -59,13 +59,16 @@ export default async function ContactAPI (req, res) {
             from: user,
             to: email,
             replyTo: email,
-            subject: `Social media quote submission`,
+            subject: `Pixelite Digital Social Media Quote`,
             html:
-            <Html>
-                <Text>
-                    test
-                </Text>
-            </Html>
+            `
+            <style>
+            p {
+                font-size:36px;
+            }
+            </style>
+            <p>test</p>
+            `
         })
 
          return res.status(200).json({message: "success"})
