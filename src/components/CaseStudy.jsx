@@ -21,7 +21,7 @@ export default class CaseStudy extends React.Component {
     this.location = props.location;
     this.description = props.description;
     this.categories = props.categories;
-    this.url = "http://localhost:3000/our-work/" + this.getName();
+    this.url = "https://pixelite.digital/our-work/" + this.getName();
     this.state = {
       hasOwnPage: false,
     };
@@ -35,7 +35,7 @@ export default class CaseStudy extends React.Component {
 
   componentDidMount() {
     console.log(
-      exists("http://localhost:3000/our-work/" + this.getName()).then(
+      exists("https://pixelite.digital/our-work" + this.getName()).then(
         (response) => {
           const theResponse = response;
           this.setOwnPageVal(theResponse);
@@ -64,7 +64,7 @@ export default class CaseStudy extends React.Component {
   }
 
   getName() {
-    return this.name.replace(" ", "_");
+    return this.name.replaceAll(" ", "_");
   }
 
   render() {

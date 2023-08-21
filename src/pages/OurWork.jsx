@@ -32,6 +32,8 @@ const OurWork = () => {
       name: "The Nippy Chippy Van",
       location: "Durham, England",
       categories: ["WebDesign", "SocialMedia", "GraphicDesign", "SEO"],
+      description: 
+      "The Nippy Chippy Van North East approached us in early 2020, asking if we were available to manage their social media and produce graphics to promote their products. We thought this was a great opportunity, which allowed us to expand into an industry we hadn't yet served. We helped grow their social media to over 2000+ followers by late 2020. "
     },
 
   ];

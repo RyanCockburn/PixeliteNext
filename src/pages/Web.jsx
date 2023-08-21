@@ -335,17 +335,15 @@ const Home = () => {
         desktopHeader={
           <>
             <span className="pixelite-white">
-              Web Design &<br />
-              Development
-            </span>
+              Does your business</span> need a website?
+            
           </>
         }
         mobileHeader={
-          <>
+<>
             <span className="pixelite-white">
-              Web Design &<br />
-              Development
-            </span>
+              Does your business</span> need a website?
+            
           </>
         }
         desktopSubheader={
@@ -353,7 +351,7 @@ const Home = () => {
             There's no better to way to boost your digital presence than with a
             website.
             <br />
-            Even better, our websitse are affordable, user-friendly, and
+            Even better, our websites are affordable, user-friendly, and
             effective.
           </>
         }
