@@ -33,11 +33,7 @@ const OurWork = () => {
       location: "Durham, England",
       categories: ["WebDesign", "SocialMedia", "GraphicDesign", "SEO"],
     },
-    {
-      name: "PvPWars",
-      location: "United States",
-      categories: ["GraphicDesign"],
-    },
+
   ];
 
   var total = 0;

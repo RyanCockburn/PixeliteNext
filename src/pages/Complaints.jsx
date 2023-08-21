@@ -39,10 +39,14 @@ const Contact = () => {
         mobileHeader={<>Complaints Procedure</>}
         desktopSubheader={
           <>
-            
+            Custom satisfication is one of our top priorities. Any issues? Please get in touch!
           </>
         }
-        mobileSubheader=""
+        mobileSubheader={
+          <>
+            Custom satisfication is one of our top priorities. Any issues? Please get in touch!
+          </>
+        }
       ></PixelitePage>
     </div>
   );

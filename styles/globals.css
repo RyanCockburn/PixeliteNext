@@ -230,6 +230,30 @@ blockquote {
   color: #373737;
 }
 
+#vorex-banner {
+  max-width: 1100px;
+  width: 90%;
+  background: var(--pixelite-background);
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+#vorex-banner img {
+  max-width: 70%;
+}
+
+#slideshow-container {
+
+  margin: 0 auto;
+}
+
+#swiper-container img {
+  width: 40%;
+  
+}
+
+
+
 blockquote h5 {
   color: var(--pixelite-blue);
 }
@@ -251,6 +275,34 @@ blockquote:after {
   margin-left: 0.25em;
   vertical-align: -0.4em;
   text-align: right;
+}
+
+#swiper-container {
+  margin: 3rem 0;
+}
+
+#notion-first-section {
+  margin-top: 3rem;
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-slide {
+
+  padding-bottom: 2rem;
+  
+}
+
+.swiper-pagination {
+  position: absolute;
+
+
+}
+
+.swiper-slide img {
+  min-width: 500px;
 }
 
 .quote {
@@ -437,6 +489,12 @@ nav > a > img {
   z-index: 100;
 }
 
+#ali-quote h1{
+  font-size: 1.75rem;
+  line-height: 2.2rem;
+  font-weight: 500;
+}
+
 .bar {
   display: block;
   width: 25px;
@@ -472,6 +530,23 @@ nav > a > img {
 
 .hamburger.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+}
+
+.portfolio-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.portfolio-section p {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+
+.portfolio-section img {
+  max-width: 600px;
+  margin-bottom: 1rem;
 }
 
 
@@ -1886,7 +1961,9 @@ input:focus, textarea:focus {
   }
 
   
-
+  #vorex-banner img {
+    max-width: 30%;
+  }
 
   
   
@@ -1896,6 +1973,17 @@ input:focus, textarea:focus {
 }
 @media (min-width: 992px) { 
 
+
+  #vorex-banner {
+    max-width: 1100px;
+    width: 90%;
+    background: var(--pixelite-background);
+  
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  
+  }
+  
 
   #upper-section h6 {
     max-width: 80%;

@@ -240,8 +240,8 @@ const Contact = () => {
         page={content}
         desktopHeader={<>Terms and Conditions</>}
         mobileHeader={<>Terms and Conditions</>}
-        desktopSubheader={<></>}
-        mobileSubheader=""
+        desktopSubheader={<>The Terms and Conditions that apply when using Pixelite Digital's services</>}
+        mobileSubheader={<>The Terms and Conditions that apply when using Pixelite Digital's services</>}
       ></PixelitePage>
     </div>
   );

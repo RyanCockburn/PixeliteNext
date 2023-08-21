@@ -255,7 +255,7 @@ const Home = () => {
               daily, weekly and monthly breakdown of all posts.
             </p>
           </div>
- 
+
           <div>
             <img src="/assets/icons/deployment.png" />
             <h3>Deployment</h3>
@@ -350,15 +350,16 @@ const Home = () => {
         }
         mobileHeader={
           <>
-            <span className="pixelite-white">Social Media. <br/> Done right.</span>
+            <span className="pixelite-white">
+              Social Media. <br /> Done right.
+            </span>
           </>
         }
         desktopSubheader={
           <>
             60% of people use social media on a daily basis. Expand the reach of
-            your business by using social media to advertise.
-
-            Choose from a selection of our packages, starting at just £50.
+            your business by using social media to advertise. Choose from a
+            selection of our packages, starting at just £50.
           </>
         }
         mobileSubheader={
@@ -588,8 +589,6 @@ const SocialMediaQuote = () => {
     document.body.style.overflowY = "hidden";
   }
 
-
-
   useEffect(() => {
     calculateCost();
     formatQuote();
@@ -635,7 +634,9 @@ const SocialMediaQuote = () => {
       </div>
       <h2></h2>
       <h2>Number of weeks</h2>
-      <p>Select the number of weeks you'd like to commission our services for.</p>
+      <p>
+        Select the number of weeks you'd like to commission our services for.
+      </p>
       <p>You have currently selected {totalWeeks} weeks</p>
       <div class="range_slider">
         <div class="sliderValue">
@@ -825,8 +826,8 @@ async function handleSubmit(event, quote) {
   if (response.ok) {
     console.log("Message sent successfully");
     reset();
-    
-    closePopout(document.body.querySelectorAll(".popout-exit")[0])
+
+    closePopout(document.body.querySelectorAll(".popout-exit")[0]);
   } else {
     //Clear out form
     console.log("Error sending message");

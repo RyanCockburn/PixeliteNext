@@ -67,7 +67,8 @@ export default async function ContactAPI (req, res) {
                 font-size:36px;
             }
             </style>
-            <p>test</p>
+            <h1>We've received your quote</h1>
+            <p>We'll review your quote, and get back to you as soon as possible.</p>
             `
         })
 

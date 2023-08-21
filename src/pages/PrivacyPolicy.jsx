@@ -129,8 +129,8 @@ const Contact = () => {
         page={content}
         desktopHeader={<>Privacy Policy</>}
         mobileHeader={<>Privacy Policy</>}
-        desktopSubheader={<></>}
-        mobileSubheader=""
+        desktopSubheader={<>Everything you need to know about the data we collect and how we use it</>}
+        mobileSubheader={<>Everything you need to know about the data we collect and how we use it</>}
       ></PixelitePage>
     </div>
   );
