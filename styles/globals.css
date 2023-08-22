@@ -993,9 +993,10 @@ nav > a > img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
   margin-right: 0.25rem;
   margin-left: 0.25rem;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  
   transition: transform 0.5s;
+
 
 }
 
@@ -1019,13 +1020,37 @@ nav > a > img {
   
 }
 
-.price-card h2 {
-  font-size: 4rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.price-description {
+  height: 650px;
 }
 
-.price-card > ul {
+#package-swiper {
+  height: 200px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+  padding: 0.5rem;
+
+}
+
+#package-swiper h1 {
+  color: var(--pixelite-grey)
+}
+
+#package-swiper .swiper-button-next {
+  display: none;
+}
+
+#package-swiper .swiper-button-prev {
+  display: none;
+}
+
+.price-card h2 {
+  font-size: 4rem;
+  margin: 2rem 0;
+}
+
+.price-card  ul {
   justify-content: center;
   align-items: center;
   text-align: left;
@@ -1035,7 +1060,7 @@ nav > a > img {
   line-height: 1.7rem;
   
 }
-.price-card > ul img{
+.price-card  ul img{
   width: 24px;
   padding-right: 1rem;
 }
@@ -1057,7 +1082,8 @@ nav > a > img {
 }
 
 .price-card a button {
-  margin-top: 2rem;
+  margin-top: 2rem; 
+  align-self: end;
 }
 
 
@@ -1710,6 +1736,10 @@ input:focus, textarea:focus {
 
 
 @media (min-width: 768px) { 
+
+  #package-swiper {
+    height: 100px;
+  }
 
   .social-additions div {
     display: flex;

@@ -52,7 +52,7 @@ const About = () => {
             help him in achieving them.
           </p>
         </div>
-        <img className="left" src="/assets/clients/8WB.png" />
+        <img className="left" src="/assets/clients/8WB.jpg" />
       </section>
       <div class="combined-heading">
         <h1>How we helped 8WB</h1>

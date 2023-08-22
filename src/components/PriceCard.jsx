@@ -22,6 +22,7 @@ export default class PriceCard extends React.Component {
     render(){
         return(
             <div className="price-card">
+                <div class="price-description">
                 {this.isAdvanced() ? console.log("Advanced") : console.log("not")}
                 <h3><span className={this.isAdvanced() ? "pixelite-blue" : "pixelite-grey"}>{this.package}</span></h3>
                 <p>{this.catchPhrase}</p>
@@ -29,7 +30,10 @@ export default class PriceCard extends React.Component {
                 <ul>
                 {this.benefits.map(benefit => <div key={benefit}><img src="assets/icons/checkmark.svg"/><li>{benefit}</li></div>)}
                 </ul>
-                <a href={"/" + this.service + "/" + this.getPackageName()}><button className="button">Full Details</button></a>
+                </div>
+                <div class="price-footer">
+                <a href={"/" + this.service + "/" + this.getPackageName()}><button className="button">Full Details of {this.package} </button></a>
+                </div>
             </div>
         )
     }

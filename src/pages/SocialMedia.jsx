@@ -167,7 +167,7 @@ const Home = () => {
               establish an online platform to drive sales.
             </p>
           </div>
-          <img src="/assets/clients/Notion_Commotion.png"></img>
+          <img src="/assets/clients/Notion_Commotion.jpg"></img>
         </section>
         <div id="notion_statistics">
           <div>

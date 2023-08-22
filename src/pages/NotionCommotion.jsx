@@ -59,7 +59,7 @@ const About = () => {
             help you establish an online platform to drive sales.
           </p>
         </div>
-        <img className="left" src="/assets/clients/Notion_Commotion.png" />
+        <img className="left" src="/assets/clients/Notion_Commotion.jpg" />
       </section>
       
       <div id="notion_statistics">
@@ -116,34 +116,34 @@ const About = () => {
   );
 
   var meta = {
-    url: "/vorex-services",
+    url: "/notion-commotion",
     description:
       "Pixelite Digital has helped Vorex Services in the provision of graphic design. Great graphics have helped them sell more products, and increased their success.",
-    title: "Vorex Services",
+    title: "Notion Commotion",
   };
 
   return (
     <div>
       <PixelitePage
-        title="Vorex Services"
+        title="Notion Commotion"
         meta={meta}
         page={content}
         desktopHeader={
           <>
-            <span class="pixelite-white">We've helped</span> Vorex Services
+            <span class="pixelite-white">We've helped</span> Notion Commotion
             <br />
-            <span class="pixelite-white">become</span> visually stunning
+            <span class="pixelite-white">reach</span> thousands online
           </>
         }
         mobileHeader={
           <>
-            <span class="pixelite-white">We've helped</span> Vorex Services
+            <span class="pixelite-white">We've helped</span> Notion Commotion
             <br />
             <span class="pixelite-white">become</span> visually stunning
           </>
         }
-        desktopSubheader={<>And we can help you, too.</>}
-        mobileSubheader={<>And we can help you, too.</>}
+        desktopSubheader={<>Through social media, we've helped the business reach thousands and <br/>sell hundreds of products.</>}
+        mobileSubheader={<>Through social media, we've helped the business reach thousands and <br/>sell hundreds of products.</>}
       ></PixelitePage>
     </div>
   );

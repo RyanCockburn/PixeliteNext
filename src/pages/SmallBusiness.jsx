@@ -267,7 +267,7 @@ const About = () => {
   var meta = {
     url: "/packages/small-business",
     description:
-      "Pixelite Digital's Small Business Package- the must-have package for all small businesses wanting to succeed in the digital space. Starting at just £149",
+      "Pixelite Digital's Small Business Package- the must-have package for all small businesses wanting to succeed in the digital space. Starting at just £199",
     title: "Small Business Package",
   };
 

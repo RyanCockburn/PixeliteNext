@@ -145,7 +145,7 @@ const Home = () => {
               <button class="button">View 8WB's case study</button>
             </Link>
           </div>
-          <img src="/assets/clients/8WB.png"></img>
+          <img src="/assets/clients/8WB.jpg"></img>
         </section>
       </div>
 
@@ -272,48 +272,50 @@ const Home = () => {
           <PriceCard
             service="web-design"
             package="Basic"
-            catchPhrase="Suitable for Startups and businesses with basic needs"
+            catchPhrase="Suitable for busineses with a tight budget, wanting an excellent website at a great price."
             price="300"
             benefits={[
-              "4 Page Website",
+              "Modern, fantastic looking website",
               "User & Mobile Friendly",
-              "Domain Name & Hosting",
-              "10 Images",
+              "Free domain for 1 Year",
+              "Basic SEO Options",
+              "Contact page with contact forms",
               "Technical Support",
+              "4 Page Website",
             ]}
             key="website-basic"
           ></PriceCard>
           <PriceCard
             service="web-design"
             package="Advanced"
-            catchPhrase="Suitable for Startups and businesses with basic needs"
+            catchPhrase="Suitable for busineses with a tight budget, wanting an excellent website at a great price."
             price="625"
             benefits={[
+              "All benefits of Basic package",
+              "Optimised file formats (faster loading)",
+              "Optimised Javascript and CSS",
+              "Advanced SEO Options- rank higher on Google",
               "7 Page Website",
-              "User & Mobile Friendly",
-              "Domain Name & Hosting",
-              "20 Images",
-              "Technical Support",
-              "Basic SEO",
             ]}
             key="website-advanced"
           ></PriceCard>
           <PriceCard
             service="web-design"
             package="Premium"
-            catchPhrase="Suitable for Startups and businesses with basic needs"
+            catchPhrase="Suitable for busineses with a tight budget, wanting an excellent website at a great price."
             price="849"
             benefits={[
+              "All benefits of Basic and Advanced packages",
+              "Optimised, industry-targeted, descriptions and titles",
+              "Help optimising your business on Google- reach more customers",
+              "Thorough SEO Options, optimised for shareability and performance",
               "10 Page Website",
-              "User & Mobile Friendly",
-              "Domain Name & Hosting",
-              "30 Images",
-              "Technical Support",
-              "Basic SEO",
+
             ]}
             key="website-premium"
           ></PriceCard>
         </div>
+        <p>*Prices don't include hosting, although this can be arranged during the order process.</p>
         <ContactForm />
       </div>
     </div>

@@ -58,7 +58,7 @@ const About = () => {
             products and releases.
           </p>
         </div>
-        <img className="left" src="/assets/clients/Vorex_Services.png" />
+        <img className="left" src="/assets/clients/Vorex_Services.jpg" />
       </section>
       <div class="combined-heading">
         <h1>Knowledge is power</h1>
