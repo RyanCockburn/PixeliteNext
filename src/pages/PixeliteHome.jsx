@@ -151,7 +151,7 @@ const Home = () => {
               solidify your business’ digital presence.
             </p>
             <a href="/web-design">
-              <button className="button">Learn More</button>
+              <button className="button">See our Web Design services</button>
             </a>
           </div>
           <div className="project-tile">
@@ -188,7 +188,7 @@ const Home = () => {
             </p>
             
             <a href="/social-media">
-              <button className="button">Learn More</button>
+            <button className="button">See our Social Media services</button>
             </a>
           </div>
         </div>
@@ -263,33 +263,33 @@ const Home = () => {
       </section>
       <div id="work">
         <div id="image-scroller">
-          <ul className="scroller-slide">
-            <a href="/our-work/Vorex_Services"><img src="assets/clients/Vorex_Services.jpg" alt="Vorex Services, a business Pixelite Digital has helped in the provision of graphic design" width="300" height="300"></img></a>
+          <div className="scroller-slide">
+            <img src="assets/clients/Vorex_Services.jpg" alt="Vorex Services, a business Pixelite Digital has helped in the provision of graphic design" width="300" height="300"></img>
             <img src="assets/clients/8WB.jpg" alt="8WB By Ali, a business Pixelite Digital has helped in the provision of web design and SEO" width="300" height="300"></img>
             <img src="assets/clients/iFry.jpg" alt="iFry, a business Pixelite Digital has helped in the provision of graphic design and social media" width="300" height="300"></img>
             <img src="assets/clients/Notion_Commotion.jpg" alt="Notion Commotion, a business Pixelite Digital has helped in the provision of SEO and social media" width="300" height="300"></img>
             <img src="assets/clients/The_Nippy_Chippy_Van.jpg" alt="The Nippy Chippy Van, a business Pixelite Digital has helped in the provision of SEO, social media and graphic design" width="300" height="300"></img>
-          </ul>
-          <ul className="scroller-slide">
+          </div>
+          <div className="scroller-slide">
           <a href="/our-work/Vorex_Services"><img src="assets/clients/Vorex_Services.jpg" alt="Vorex Services, a business Pixelite Digital has helped in the provision of graphic design" width="300" height="300"></img></a>
             <img src="assets/clients/8WB.jpg" alt="8WB By Ali, a business Pixelite Digital has helped in the provision of web design and SEO" width="300" height="300"></img>
             <img src="assets/clients/iFry.jpg" alt="iFry, a business Pixelite Digital has helped in the provision of graphic design and social media" width="300" height="300"></img>
             <img src="assets/clients/Notion_Commotion.jpg" alt="Notion Commotion, a business Pixelite Digital has helped in the provision of SEO and social media" width="300" height="300"></img>
             <img src="assets/clients/The_Nippy_Chippy_Van.jpg" alt="The Nippy Chippy Van, a business Pixelite Digital has helped in the provision of SEO, social media and graphic design" width="300" height="300"></img>
-          </ul>
-          <ul className="scroller-slide">
+          </div>
+          <div className="scroller-slide">
           <a href="/our-work/Vorex_Services"><img src="assets/clients/Vorex_Services.jpg" alt="Vorex Services, a business Pixelite Digital has helped in the provision of graphic design" width="300" height="300"></img></a>
             <img src="assets/clients/8WB.jpg" alt="8WB By Ali, a business Pixelite Digital has helped in the provision of web design and SEO" width="300" height="300"></img>
             <img src="assets/clients/iFry.jpg" alt="iFry, a business Pixelite Digital has helped in the provision of graphic design and social media" width="300" height="300"></img>
             <img src="assets/clients/Notion_Commotion.jpg" alt="Notion Commotion, a business Pixelite Digital has helped in the provision of SEO and social media" width="300" height="300"></img>
             <img src="assets/clients/The_Nippy_Chippy_Van.jpg" alt="The Nippy Chippy Van, a business Pixelite Digital has helped in the provision of SEO, social media and graphic design" width="300" height="300"></img>
-          </ul>
-          <ul className="scroller-slide">
+          </div>
+          <div className="scroller-slide">
           <a href="/our-work/Vorex_Services"><img src="assets/clients/Vorex_Services.jpg" alt="Vorex Services, a business Pixelite Digital has helped in the provision of graphic design" width="300" height="300"></img></a>
             <img src="assets/clients/8WB.jpg" alt="8WB By Ali, a business Pixelite Digital has helped in the provision of web design and SEO" width="300" height="300"></img>
             <img src="assets/clients/iFry.jpg" alt="iFry, a business Pixelite Digital has helped in the provision of graphic design and social media" width="300" height="300"></img>
             <img src="assets/clients/The_Nippy_Chippy_Van.jpg" alt="The Nippy Chippy Van, a business Pixelite Digital has helped in the provision of SEO, social media and graphic design" width="300" height="300"></img>
-          </ul>
+          </div>
         </div>
         <Link href="/our-work">
           <button class="button">See more of our work</button>

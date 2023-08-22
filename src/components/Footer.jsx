@@ -11,15 +11,21 @@ export default class Footer extends React.Component {
             <div>
               <h3>What we do</h3>
               <ul>
+                <li>
                 <Link href="/web-design">
-                  <li>Web Design & Development</li>
+                  Web Design & Development
                 </Link>
+                </li>
+                <li>
                 <Link href="/branding">
-                  <li>Branding</li>
+                  Branding
                 </Link>
+                </li>
+                <li>
                 <Link href="/social-media">
-                  <li>Social Media</li>
+                  Social Media
                 </Link>
+                </li>
               </ul>
             </div>
             <div>

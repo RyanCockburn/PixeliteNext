@@ -161,7 +161,7 @@ p {
 
 .button {
   top:50%;
-  background-color:var(--pixelite-blue);
+  background-color: #0072DB;
   color: #fff;
   border:none;
   border-radius:5px;  

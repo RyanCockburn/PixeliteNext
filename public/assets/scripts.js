@@ -136,4 +136,3 @@ window.onresize = function(){
 window.addEventListener("scroll", reveal);
 window.addEventListener("load", reveal);
 window.addEventListener("load", countupAll);
-window.addEventListener("load", updateQuestionHeader)
