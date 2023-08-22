@@ -22,27 +22,13 @@ export default class CaseStudy extends React.Component {
     this.description = props.description;
     this.categories = props.categories;
     this.url = "https://pixelite.digital/our-work/" + this.getName();
-    this.state = {
-      hasOwnPage: false,
-    };
+    this.hasOwnPage = props.hasOwnPage;
     this.isLeft = props.isLeft;
     this.formatCategories();
   }
 
-  setOwnPageVal = (e) => {
-    this.setState({ hasOwnPage: e });
-  };
 
-  componentDidMount() {
-    console.log(
-      exists("https://pixelite.digital/our-work" + this.getName()).then(
-        (response) => {
-          const theResponse = response;
-          this.setOwnPageVal(theResponse);
-        }
-      )
-    );
-  }
+
   validateCategories() {
     this.categories.forEach((category) => {
       if (!(category in categories)) {
@@ -68,7 +54,7 @@ export default class CaseStudy extends React.Component {
   }
 
   render() {
-    var hasOwnPage = this.state.hasOwnPage;
+
     var className = this.isLeft ? "case-study left" : "case-study";
     return (
       <div className={className}>
@@ -76,7 +62,7 @@ export default class CaseStudy extends React.Component {
           <h2>{this.name}</h2>
           <h5>{this.getCategories()}</h5>
           <p>{this.description}</p>
-          {hasOwnPage ? (
+          {this.hasOwnPage ? (
             <Link href={this.url}><button class="button">View the full case study</button></Link> ) :( null
           )}
         </div>

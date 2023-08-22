@@ -28,9 +28,7 @@ const Contact = () => {
         mobileHeader={<>Contact Us</>}
         desktopSubheader={
           <>
-            Need help in digital marketing, website design or branding?{" "}
-            <br className="desktop-break" />
-            Look no further.
+            Have any queries about our services? Or maybe something else? <br/>Please don't hesitate to get in touch!
           </>
         }
         mobileSubheader=""

@@ -13,14 +13,22 @@ const OurWork = () => {
       location: "United States",
       categories: ["GraphicDesign"],
       description: `We've worked closely with Vorex for over 2 years, actively working to create graphics to promote their online gaming platforms. We've helped promote their content to thousands of users throughout our time working together.`,
+      hasOwnPage: true
     },
     {
       name: "8WB",
       location: "Darlington, England",
       categories: ["WebDesign", "WebDevelopment", "SEO"],
-      description: "8WB, or 8 Week Blitz, is a personal fitness program created by Ali Cunningham. Ali approached us wanting to increase his reach via a new website. We accepted the task and have since worked very closely with Ali to help connect with him even more clients."
+      description: "8WB, or 8 Week Blitz, is a personal fitness program created by Ali Cunningham. Ali approached us wanting to increase his reach via a new website. We accepted the task and have since worked very closely with Ali to help connect with him even more clients.",
+      hasOwnPage: true
     },
-    { name: "Notion Commotion", location: "UK", categories: ["SocialMedia"], description: "Notion Commotion is a TikTok account that sells productivity related products. We've helped the account reach thousands of users, and sell hundreds of products as a result. " },
+    { 
+      name: "Notion Commotion", 
+      location: "UK", 
+      categories: ["SocialMedia", "SEO", "GraphicDesign"], 
+      description: "Notion Commotion is a TikTok account that sells productivity related products. We've helped the account reach thousands of users, and sell hundreds of products as a result. ",
+      hasOwnPage: true
+    },
     {
       name: "iFry",
       location: "Durham, England",
@@ -54,6 +62,7 @@ const OurWork = () => {
               categories={transformation.categories}
               description={transformation.description}
               isLeft = {isLeft}
+              hasOwnPage = {transformation.hasOwnPage}
             />
           );
         })}

@@ -6,7 +6,7 @@ export default class Footer extends React.Component {
     return (
       <div id="footer">
         <div id="footer-container">
-          <img src="/assets/PixeliteDigitalLogo.png" alt="Pixelite Digital transparent logo on dark background"></img>
+          <img src="/assets/PixeliteDigitalLogo.png" alt="Pixelite Digital transparent logo on dark background" width="150" height="61.72"></img>
           <div id="footer-sections">
             <div>
               <h3>What we do</h3>
@@ -28,7 +28,7 @@ export default class Footer extends React.Component {
                 <Link href="/packages/small-business">
                   <li>Small Business Package</li>
                 </Link>
-                <Link href="/packages/social-media">
+                <Link href="/packages/social-media-package">
                   <li>Social Media Package</li>
                 </Link>
               </ul>
@@ -45,25 +45,25 @@ export default class Footer extends React.Component {
                   href="https://www.facebook.com/pixelite.digital/"
                   target="_blank"
                 >
-                  <img src="/assets/icons/facebook.png" href="Pixelite Digital Facebook"/>
+                  <img src="/assets/icons/facebook.png" alt="Pixelite Digital Facebook" width="24" height="24" />
                 </Link>
                 <Link
                   href="https://www.facebook.com/pixelite.digital/"
                   target="_blank"
                 >
-                  <img src="/assets/icons/twitter.png" href="Pixelite Digital Twitter"/>
+                  <img src="/assets/icons/twitter.png" alt="Pixelite Digital Twitter" width="24" height="24" />
                 </Link>
                 <Link
                   href="https://www.instagram.com/pixelite.digital/"
                   target="_blank"
                 >
-                  <img src="/assets/icons/instagram.png" href="Pixelite Digital Instagram" />
+                  <img src="/assets/icons/instagram.png" alt="Pixelite Digital Instagram" width="24" height="24" />
                 </Link>
                 <Link
                   href="https://www.facebook.com/pixelite.digital/"
                   target="_blank"
                 >
-                  <img src="/assets/icons/linkedin.png" href="Pixelite Digital Linkedin" />
+                  <img src="/assets/icons/linkedin.png" href="Pixelite Digital Linkedin" alt="Pixelite Digital Linkedin" width="24" height="24" />
                 </Link>
               </div>
             </div>

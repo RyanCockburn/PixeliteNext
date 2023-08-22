@@ -74,7 +74,7 @@ export default class Header extends React.Component {
       <div id="upper-section">
         <ul className="nav-menu">
           <div id="menu-header">
-            <Image src="/assets/PixeliteDigitalLogo.png" width="150" height="60"/>
+            <Image src="/assets/PixeliteDigitalLogo.png" alt="Pixelite Digital logo on a dark background" width="150" height="60"/>
           </div>
           <nav>
             <li className="nav-item">

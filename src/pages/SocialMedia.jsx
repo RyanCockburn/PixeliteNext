@@ -199,9 +199,9 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <button id="notion_button" class="button">
+        <a href="/our-work/Notion_Commotion"><button id="notion_button" class="button">
           View the full case study
-        </button>
+        </button></a>
       </div>
       <section className="pixelite-section left reveal">
         <div>
@@ -675,6 +675,7 @@ const SocialMediaQuote = () => {
       </div>
       <div id="custom-quote">
         <h2>Your Custom Quote</h2>
+      
         <div id="selected-socials">
           {selectedSocials.map((social) => {
             return (
@@ -696,6 +697,7 @@ const SocialMediaQuote = () => {
             );
           })}
         </div>
+        <p>*By default, we make Facebook a mandatory platform. However, if your business doesn't want management for Facebook, we can discuss this later in the order process.</p>
       </div>
 
       <div id="price-info">
@@ -713,11 +715,10 @@ const SocialMediaQuote = () => {
       </div>
       <div id="quote-footer">
         <p>
-          *All quotes aren't final, and we're more than happy to make
-          adjustments according to your business and its needs. This quote
-          simply allows us to give you an idea of our options and pricing. With
-          that said, please contact us and we'll be able to make our packages
-          further work for you.
+          *The 'Get in Touch' button will send us a copy of your quote, and allow us to contact you regarding your quote. From here, we can discuss the specifics of your
+          business and its needs, and later commence the order process. We aim to get back to you within a few hours.
+          <br/><br/>
+          You will also receive a confirmation of your quote to the email you enter. Please check your spam and junk folders, as it could be the case it's sent there.
         </p>
         <button class="button" onClick={(event) => openPopout(event.target)}>
           Get in touch

@@ -292,6 +292,7 @@ blockquote:after {
 .swiper-slide {
 
   padding-bottom: 2rem;
+
   
 }
 
@@ -302,7 +303,7 @@ blockquote:after {
 }
 
 .swiper-slide img {
-  min-width: 500px;
+  min-width: 400px;
 }
 
 .quote {
@@ -781,19 +782,13 @@ nav > a > img {
 }
 
 #work button {
-  color: var(--pixelite-grey);
-  text-transform: none;
-  font-size: 1.3rem;
-  font-weight: 500;
-  position: relative;
+
   margin-bottom: 80px;
-  border: none;
+
   
 }
 
-#image-scroller:hover > *{
-  animation-play-state: paused;
-}
+
 
 .scroller-slide {
   display: inline-block;
@@ -805,7 +800,7 @@ nav > a > img {
 
 
 
-.scroller-slide > * {
+.scroller-slide img {
   width: 300px;
   height: 300px;
   margin: 0 5px;

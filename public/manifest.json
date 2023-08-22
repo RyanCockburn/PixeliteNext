@@ -1,0 +1,16 @@
+{
+    "name": "Pixelite Digital",
+    "short_name": "Pixelite",
+    "lang": "en-US",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#007de9",
+    "background-color": "#fffff",
+    "icons": [
+  {
+    "src": "/assets/pd-fancy.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }
+    ]
+  }
