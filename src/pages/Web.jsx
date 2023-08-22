@@ -9,6 +9,9 @@ import PriceCard from "../components/PriceCard";
 import PixelitePage from "./PixelitePage";
 import BespokeWebsite from "/public/assets/BespokeWebsite.json";
 
+
+
+
 const Home = () => {
   const content = (
     <div>
@@ -272,7 +275,7 @@ const Home = () => {
           <PriceCard
             service="web-design"
             package="Basic"
-            catchPhrase="Suitable for busineses with a tight budget, wanting an excellent website at a great price."
+            catchPhrase="Suitable for businesses with a tight budget, wanting an excellent website at a great price."
             price="300"
             benefits={[
               "Modern, fantastic looking website",
@@ -307,8 +310,8 @@ const Home = () => {
             benefits={[
               "All benefits of Basic and Advanced packages",
               "Optimised, industry-targeted, descriptions and titles",
-              "Help optimising your business on Google- reach more customers",
-              "Thorough SEO Options, optimised for shareability and performance",
+              "Optimise your business on Google",
+              "Thorough SEO Options, optimised for shareability",
               "10 Page Website",
 
             ]}
