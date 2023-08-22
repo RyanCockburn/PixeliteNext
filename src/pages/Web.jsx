@@ -254,7 +254,7 @@ const Home = () => {
               <li>Basic SEO</li>
               <li>Specialist Support</li>
             </ul>
-            <Link href="/packages/small-business"><button class="button">Learn more</button></Link>
+            <Link href="/packages/small-business"><button class="button">Find out more</button></Link>
           </p>
         </div>
         <img src="/assets/Pixelite-Small-Business-Package.png"/>

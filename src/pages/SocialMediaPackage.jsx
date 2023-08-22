@@ -102,7 +102,7 @@ const About = () => {
               <p>Learn more about this feature →</p>
             </div>
           </div>
-          <img src="/assets/Promotional-Graphic.png"></img>
+          <img src="/assets/Promotional-Graphic.png" alt="Pixelite's social media package includes an advertisement post so you can get your business out there."></img>
         </section>
         <section className="pixelite-section right reveal">
         <img

@@ -67,7 +67,7 @@ export default class CaseStudy extends React.Component {
           )}
         </div>
         <div className="case-study-image">
-          <img src={`/assets/clients/${this.getName()}.png`} />
+          <img src={`/assets/clients/${this.getName()}.jpg`} />
         </div>
       </div>
     );

@@ -102,7 +102,7 @@ const About = () => {
               <p>Learn more about this feature →</p>
             </div>
           </div>
-          <img src="/assets/Promotional-Graphic.png"></img>
+          <img src="/assets/Promotional-Graphic.png" alt="Pixelite Digital's small business package provides 2 graphics for your businerss"></img>
         </section>
         <section className="pixelite-section right reveal">
           <Lottie
@@ -182,7 +182,7 @@ const About = () => {
               <GlobeAltIcon className="h-24 w-24" />
               <p>www.the8wbclub.com</p>
             </div>
-            <img src="/assets/websites/8WB.png" />
+            <img src="/assets/websites/8WB.png" alt="8WB's website preview (made by Pixelite Digital)" />
             <div class="testimonial-review">
               <p>
                 Fantastic service from start to finish. Normally with business
